@@ -7,4 +7,70 @@ span>h1{
 
 .mat-toolbar.mat-primary {
   background: #007bff;
+  margin-bottom: -12px;
+}
+
+.mat-drawer{
+  background: #007bff;
+  width : 300px;
+  text-align: center;
+  overflow-x: hidden;
+
+}
+
+.sidenav {
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+h2.welcome{
+  color: aliceblue;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 300%;
+}
+.mat-icon.welcome{
+  font-size: 240px;
+  vertical-align: middle;
+  color: cornflowerblue;
+  width : 250px;
+}
+button.menu-button{
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1rem;
+  color: aliceblue;
+
+  mat-icon {
+    margin-right: 8px;
+  }
+}
+mat-divider {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+//footer
+.footer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+.footer > div {
+  text-align: center;
+}
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 1;
 }

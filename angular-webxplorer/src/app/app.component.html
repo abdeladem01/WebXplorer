@@ -1,15 +1,47 @@
+<mat-drawer-container [hasBackdrop]=true>
 <p>
   <mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <button mat-icon-button class="example-icon" (click)="drawer.toggle()" aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
     </button>
     <span><h1>{{title}}</h1></span>
     <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon" aria-label="icon-button with share icon" titme="Share the game with your friends">
+    <button mat-icon-button class="example-icon" aria-label="icon-button with share icon" title="Share the game with your friends">
       <mat-icon>share</mat-icon>
     </button>
   </mat-toolbar>
 </p>
 <div [ngStyle]="{backgroundImage :  'url(../images/kq19DZ.webp)'}"></div>
+</mat-drawer-container>
+<mat-drawer #drawer class="sidenav" mode="over">
+  <br><br>
+  <mat-icon class="welcome">wifi_tethering</mat-icon>
+  <h2 class="welcome">Welcome to the Internet Game</h2>
+  <button mat-button class="menu-button">
+    <mat-icon>home</mat-icon>
+    <span>Home</span>
+  </button>
+  <button mat-button class="menu-button">
+    <mat-icon>person</mat-icon>
+    <span>Sign in/up</span>
+  </button>
+  <button mat-button class="menu-button">
+    <mat-icon>info</mat-icon>
+    <span>About the game</span>
+  </button>
+
+  <mat-divider></mat-divider>
+
+  <button mat-button class="menu-button">
+    <mat-icon>help</mat-icon>
+    <span>Report a bug</span>
+  </button>
+
+</mat-drawer>
 <app-title-page></app-title-page>
 <router-outlet></router-outlet>
+<div class="footer">
+  <div class="item1">Currently in development</div>
+  <div class="item2">©2022 WebXploRer</div>
+  <div class="item3">Game designed by WebXploRer Team 3TC</div>
+</div>

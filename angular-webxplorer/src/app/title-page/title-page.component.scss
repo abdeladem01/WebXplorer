@@ -1,6 +1,37 @@
 h1.titleGame{
   text-align: center;
-  font : bold;
+  font-weight: 900;
   font-size: 400%;
+  font-family: 'Varela Round', sans-serif;
+}
+.ripple-container1 {
+  grid-row-start: 1;
+  grid-row-end: 1;
+  cursor: pointer;
+  text-align: center;
+  background: #007bff;
+  color: aliceblue;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 250%;
+  width: 300px;
+  height: 170px;
+  padding-top: 130px;
+}
+.ripple-container2 {
+  cursor: pointer;
+  text-align: center;
+  background: #007bff;
+  color: aliceblue;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 250%;
+  width: 300px;
+  height: 170px;
+  padding-top: 130px;
 
+}
+.lesboutons{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  justify-content: center;
 }
