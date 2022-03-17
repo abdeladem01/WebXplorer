@@ -49,11 +49,15 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
+import { GuestOrConnectComponent } from './guest-or-connect/guest-or-connect.component';
+import { SigninSignupComponent } from './signin-signup/signin-signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TitlePageComponent
+    TitlePageComponent,
+    GuestOrConnectComponent,
+    SigninSignupComponent
   ],
   imports: [
     BrowserModule,
