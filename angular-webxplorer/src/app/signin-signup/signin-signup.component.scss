@@ -1,0 +1,11 @@
+.container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  justify-content: center;
+}
+.card {
+  max-width: 400px;
+  background: rgba(9, 200, 217, 0.2);
+  color: #007bff;
+}
