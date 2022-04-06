@@ -4,8 +4,31 @@
   grid-gap: 20px;
   justify-content: center;
 }
+.mat-card-subtitle{
+  color: white;
+}
+
 .card {
+  display: grid;
+  grid-template-columns: repeat(0, 1fr);
+  grid-gap: 0px;
+  grid-auto-rows: minmax(100px, auto);
   max-width: 400px;
-  background: rgba(9, 200, 217, 0.2);
-  color: #007bff;
+  background: #9772e0;
+  color: white;
+}
+
+
+.mat-card-actions{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0px;
+  grid-auto-rows: minmax(20px, auto);
+}
+.sign{
+  grid-column: 2;
+  grid-row: 2;
+}
+.sign:hover{
+  background : linear-gradient(70deg, blue, pink);
 }

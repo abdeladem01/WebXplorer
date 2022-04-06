@@ -6,12 +6,12 @@ span>h1{
 }
 
 .mat-toolbar.mat-primary {
-  background: #007bff;
+  background: linear-gradient(70deg, blue, pink);
   margin-bottom: -12px;
 }
 
 .mat-drawer{
-  background: #007bff;
+  background: linear-gradient(180deg, blue, pink);
   width : 300px;
   text-align: center;
   overflow-x: hidden;
@@ -62,7 +62,7 @@ mat-divider {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #007bff;
+  background: linear-gradient(70deg, blue, pink);
   color: white;
   text-align: center;
   padding: 10px;

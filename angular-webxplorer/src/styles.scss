@@ -17,13 +17,16 @@ $my-app-theme: mat.define-light-theme(
 
 @include mat.all-component-themes($my-app-theme);
 /* Application-wide Styles */
+
+
 @font-face {
   font-family: 'Varela Round';
   src: url("varelaround-regular-webfont.woff") format("woff");
 }
 html{
   //background: linear-gradient(45deg, rgba(10, 186, 151, 0.57), rgba(89, 213, 231, 0.51));
-  background: white;
+  //background: white;
+  background: linear-gradient(0deg, #9772e0,pink);
 }
 
 h1 {

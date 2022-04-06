@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: 'playas', component: GuestOrConnectComponent},
   {path: 'gamesettings', component: GameSettingsComponent}
 ];
-
+ 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
