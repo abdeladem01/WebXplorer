@@ -12,7 +12,10 @@ export class GuestOrConnectComponent implements OnInit {
 
   radius=300;color="rgba(5,89,124,0.89)";
   isShow=false;
-  constructor() { }
+  user!: String;
+  constructor() {
+    var user=this.user;
+  }
 
   ngOnInit(): void {
   }
@@ -24,3 +27,7 @@ export class GuestOrConnectComponent implements OnInit {
     }
   }
 }
+function clickevent() {
+  throw new Error('Function not implemented.');
+}
+

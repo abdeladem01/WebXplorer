@@ -14,11 +14,11 @@
   <div *ngIf = "isShow">
     <mat-form-field appearance="outline">
       <mat-label>Your guest's username</mat-label>
-      <input matInput placeholder="Placeholder">
+      <input matInput placeholder="Username" [(ngModel)]="user" >
       <mat-icon matSuffix>perm_identity</mat-icon>
-      <mat-hint>You progress will not be saved, but you'll be in the leaderboard.</mat-hint>
+      <mat-hint>You progress will not be saved</mat-hint>
     </mat-form-field>
-    <button mat-icon-button class="done-icon" >
+    <button mat-icon-button class="done-icon" routerLink="/num">
       <mat-icon>done</mat-icon>
     </button>
   </div>

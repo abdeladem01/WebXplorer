@@ -1,0 +1,27 @@
+{
+  "name": "wayback-downloader",
+  "version": "1.0.0",
+  "description": "Wayback downloader",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 10000"
+  },
+  "keywords": [
+    "wayback",
+    "wayback-machine",
+    "wayback-downloader",
+    "archive.org"
+  ],
+  "author": "Susmith Krishnan",
+  "license": "ISC",
+  "dependencies": {
+    "fetch": "^1.1.0",
+    "index.js": "^0.0.3",
+    "split": "^1.0.1",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
+  }
+}
