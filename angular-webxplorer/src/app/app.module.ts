@@ -55,6 +55,7 @@ import { GameSettingsComponent } from './game-settings/game-settings.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -118,7 +119,8 @@ import {FormsModule} from "@angular/forms";
     PortalModule,
     ScrollingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
