@@ -52,6 +52,8 @@ import {OverlayModule} from '@angular/cdk/overlay';
 import { GuestOrConnectComponent } from './guest-or-connect/guest-or-connect.component';
 import { SigninSignupComponent } from './signin-signup/signin-signup.component';
 import { GameSettingsComponent } from './game-settings/game-settings.component';
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -116,7 +118,7 @@ import { GameSettingsComponent } from './game-settings/game-settings.component';
     PortalModule,
     ScrollingModule,
     FormsModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

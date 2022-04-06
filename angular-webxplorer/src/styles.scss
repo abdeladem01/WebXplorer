@@ -22,7 +22,8 @@ $my-app-theme: mat.define-light-theme(
   src: url("varelaround-regular-webfont.woff") format("woff");
 }
 html{
-  background: linear-gradient(45deg, rgba(10, 186, 151, 0.57), rgba(89, 213, 231, 0.51));
+  //background: linear-gradient(45deg, rgba(10, 186, 151, 0.57), rgba(89, 213, 231, 0.51));
+  background: white;
 }
 
 h1 {
