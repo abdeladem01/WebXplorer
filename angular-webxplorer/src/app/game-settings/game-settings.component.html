@@ -1,0 +1,42 @@
+<div class="content">
+<mat-card class="card">
+  <mat-card-title>Choose settings for your game</mat-card-title>
+  <mat-card-content>
+  <mat-tab-group [selectedIndex]="selected">
+    <mat-tab label="Choose Category">
+<!--      <section class="section1">-->
+<!--  <span class="list-section1">-->
+<!--    <mat-checkbox class="margin"-->
+<!--                  [checked]="allComplete"-->
+<!--                  [color]="task.color"-->
+<!--                  [indeterminate]="someComplete()"-->
+<!--                  (change)="setAll($event.checked)">-->
+<!--      {{task.name}}-->
+<!--    </mat-checkbox>-->
+<!--  </span>-->
+<!--        <span class="list-section1">-->
+<!--    <ul>-->
+<!--      <li *ngFor="let subtask of task.subtasks">-->
+<!--        <mat-checkbox [(ngModel)]="subtask.completed"-->
+<!--                      [color]="subtask.color"-->
+<!--                      (ngModelChange)="updateAllComplete()">-->
+<!--          {{subtask.name}}-->
+<!--        </mat-checkbox>-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--  </span>-->
+<!--      </section>-->
+    </mat-tab>
+    <mat-tab  label="Choose number of rounds">
+      interactive way for number of rounds
+    </mat-tab>
+    <mat-tab label="Choose difficulty">
+      here content difficulty
+    </mat-tab>
+  </mat-tab-group>
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </mat-card-footer>
+</mat-card>
+</div>

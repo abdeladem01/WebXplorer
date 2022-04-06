@@ -1,5 +1,3 @@
-import{HttpClientModule} from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -53,7 +51,7 @@ import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
 import { GuestOrConnectComponent } from './guest-or-connect/guest-or-connect.component';
 import { SigninSignupComponent } from './signin-signup/signin-signup.component';
-import { NumberGamesComponent } from './number-games/number-games.component';
+import { GameSettingsComponent } from './game-settings/game-settings.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +59,7 @@ import { NumberGamesComponent } from './number-games/number-games.component';
     TitlePageComponent,
     GuestOrConnectComponent,
     SigninSignupComponent,
-    NumberGamesComponent
+    GameSettingsComponent
   ],
   imports: [
     BrowserModule,
