@@ -20,7 +20,7 @@ app.use((req,res,next)=>{
 	  url=data.archived_snapshots.closest.url;
     //We get the html from the url
     html=httpGet(url);
-    res.send(html)
+    res.send(url)
   })
 
 })
