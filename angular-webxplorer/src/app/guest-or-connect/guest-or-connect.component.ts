@@ -6,12 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./guest-or-connect.component.scss']
 })
 export class GuestOrConnectComponent implements OnInit {
-  centered = false;
-  disabled = false;
-  unbounded = false;
-
-  radius=300;color="rgba(5,89,124,0.89)";
+  centered = false;disabled = false;unbounded = false;
+  radius=300;color="rgba(198,155,215,0.61)";
   isShow=false;
+
   user!: String;
   constructor() {
     var user=this.user;

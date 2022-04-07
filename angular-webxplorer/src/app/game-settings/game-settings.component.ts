@@ -23,10 +23,10 @@ export class GameSettingsComponent implements OnInit {
     completed: false,
     color: 'primary',
     subtasks: [
-      {name: 'Social Media', completed: false, color: 'accent'},
-      {name: 'Sports', completed: false, color: 'accent'},
-      {name: 'News', completed: false, color: 'accent'},
-      {name: 'INSA Websites', completed: false, color: 'accent'},
+      {name: 'Social Media', completed: true, color: 'accent'},
+      {name: 'Sports', completed: true, color: 'accent'},
+      {name: 'News', completed: true, color: 'accent'},
+      {name: 'INSA Websites', completed: true, color: 'accent'},
     ],
   };
 
@@ -37,6 +37,17 @@ export class GameSettingsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+  //Phase 1
+  next1(){
+    let a = false;
+    this.task.subtasks?.forEach(e=>a=a||e.completed==true)
+    if (a){
+      this.selected=1;
+    }else{
+      this.selected=0;
+    }
+
   }
   //Phase 2
   next(i: number){
