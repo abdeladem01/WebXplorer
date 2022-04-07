@@ -2,6 +2,7 @@ const http=require('http');
 const app = require('./backend/app.js');
 
 //error handling
+//gives us a valid port
 const normalizePort = val => {
   var port = parseInt(val, 10);
 
@@ -15,6 +16,8 @@ const normalizePort = val => {
 
   return false;
 };
+
+//Search for various errors and handle them
 const onError = error => {
   if (error.syscall !== "listen") {
     throw error;
