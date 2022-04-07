@@ -8,6 +8,7 @@
 .card{
   max-width: 700px;
   background: #b193e0; //TOC
+  background: linear-gradient(230deg, #065ca3, #9772e0 );
   color: white;
 }
 .mat-card-title{
@@ -23,10 +24,11 @@
   justify-content: center;
 }
 .ripple-container , .ripple-containerCard, .ripple-containerCardCentral {
+  border-radius: 30px;
   cursor: pointer;
   text-align: center;
-  background: #9772e0;
-  color: aliceblue;
+  //background: #9772e0;
+  background: black;   color: aliceblue;
   font-family: 'Varela Round', sans-serif;
   font-size: 150%;
   width: 100px;
@@ -34,6 +36,8 @@
   padding-top: 15px;
 }
 .ripple-containerCard {
+  transition: transform .2s;
+  border-radius: 10px;
   font-size: 200%;
   width: 300px;
   height: 45px;
@@ -41,11 +45,19 @@
   margin-left: 50px;
 }
 .ripple-containerCardCentral {
+  transition: transform .2s;
+  border-radius: 10px;
   font-size: 200%;
   width: 400px;
   height: 50px;
   padding-top: 13px;
 }
+.ripple-containerCard:hover,.ripple-containerCardCentral:hover{
+  -ms-transform: scale(1.18); /* IE 9 */
+  -webkit-transform: scale(1.18); /* Safari 3-8 */
+  transform: scale(1.18);
+}
+
 h3{
   font-size: 40%;
 }

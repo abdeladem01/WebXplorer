@@ -27,7 +27,14 @@ html{
   //background: linear-gradient(45deg, rgba(10, 186, 151, 0.57), rgba(89, 213, 231, 0.51));
   //background: white;
   //background: linear-gradient(0deg, #9772e0,pink);
-  background: linear-gradient(0deg, white ,pink);
+  //background: linear-gradient(0deg, white ,pink);
+ /* background:
+    linear-gradient(217deg, rgb(25, 229, 251), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgb(163, 0, 251), rgba(0,255,0,0) 95.71%),
+    linear-gradient(336deg, rgb(25, 115, 251), rgba(0,0,255,0) 70.71%),
+    linear-gradient(17deg, rgb(30, 0, 97), rgba(0,0,255,0) 65.71%);*/
+  background-image: radial-gradient(farthest-corner at 30% 50%,
+    #ffffff 0%, #0e68b7 100%);
 }
 
 h1 {
