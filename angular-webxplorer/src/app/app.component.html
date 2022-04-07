@@ -13,7 +13,10 @@
 </p>
 <div [ngStyle]="{backgroundImage :  'url(../images/kq19DZ.webp)'}"></div>
 </mat-drawer-container>
-<mat-drawer #drawer class="sidenav" mode="over">
+<mat-drawer #drawer class="sidenav" mode="over" >
+  <button mat-icon-button class="example-icon" (click)="drawer.toggle()" aria-label="Example icon-button with menu icon">
+  <mat-icon>close</mat-icon>
+  </button>
   <br><br>
   <mat-icon class="welcome">wifi_tethering</mat-icon>
   <h2 class="welcome">Welcome to the Internet Game</h2>
