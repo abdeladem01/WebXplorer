@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ThemePalette} from '@angular/material/core';
+import { Router } from '@angular/router';
 
 export interface Task {
   name: string;
@@ -34,7 +35,7 @@ export class GameSettingsComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit(): void {
   }
@@ -57,7 +58,7 @@ export class GameSettingsComponent implements OnInit {
   //Phase 3
   end(i : number){
     this.difficulty=i;
-    console.log(this.difficulty);
+    this.router.navigate(['/waitingpage']);
   }
 
   //Checkbox utility

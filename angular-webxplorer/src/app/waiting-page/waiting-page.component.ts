@@ -1,37 +1,37 @@
 import { Component, OnInit } from '@angular/core';
-import {trigger, state, style, animate, transition, stagger, query, keyframes} from '@angular/animations';
+import { Router } from '@angular/router';
+import {trigger, style, animate, transition, stagger, query, keyframes} from '@angular/animations';
 // s
 @Component({
   selector: 'app-waiting-page',
   templateUrl: './waiting-page.component.html',
-  styleUrls: ['./waiting-page.component.scss']
+  styleUrls: ['./waiting-page.component.scss'],
+  animations: [
+    trigger('listAnimation', [
+      transition('* => *', [
+        query(':enter', style({ opacity: 0}), {optional: true}),
+        query(':enter', stagger('550ms', [
+          animate('3s ease-in', keyframes([
+            style({opacity: 0, transform: 'translateT(-75px)', offset:0}),
+            style({opacity: .5, transform: 'translateT(55px)', offset:0.3}),
+            style({opacity: 1, transform: 'translateT(75px)', offset:1}),
+          ]))
+        ]))
+      ])
+    ])
+  ]
 })
 export class WaitingPageComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-     /* setTimeout(function(){
-        var el = document.getElementById('t1');
-        var h1 = document.createElement('h1');
-        h1.appendChild(document.createTextNode("And because the Internet before was not as fast as today's"));
-        $('h1').addClass("reveal");
-      }, 500);*/
+  items : string[] = [];
+  constructor(private router: Router) {
+    this.items = ['And because the Internet before was not as fast as today\'s','We invite you to go back to the good old habits','by waiting for the loading of the game'];
 
   }
-  /*textAnimation = trigger('textAnimation', [
-    transition('* => *', [
-      query(':enter', [
-        stagger(2500, [
-          style({ transform: 'translateY(-100px)', opacity: '0' }),
-          animate('5s', keyframes([
-            style({ transform: 'translateY(-100px)', opacity: '1' }),
-            style({ transform: 'translateY(0)', opacity: '1' }),
-            style({ transform: 'translateY(0)', opacity: '1' }),
-            style({ transform: 'translateY(100px)', opacity: '0' })
-          ]))
-        ])
-      ], { optional: true })
-    ])
-  ]);*/
+
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.router.navigate(['/home']);
+    }, 20000);
+  }
+
 }
