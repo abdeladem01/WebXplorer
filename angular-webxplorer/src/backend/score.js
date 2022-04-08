@@ -8,41 +8,44 @@ function date(date){
     return new Date(year, month - 1, day);
 }
 
-vraiedate=date(vraiedate);
-datejoueur=date(datejoueur)
+
 //easy, hard, difficult? easy with only the year, hard with the month, difficult with the day
 //gerer le cas ou il donne une date inexistante pour pas lui donner des points quand meme
 
-const diff = Math.ceil(Math.abs(vraiedate - datejoueur) / (1000 * 60 * 60 * 24)); 
-console.log(diff + " days");
+
 
 function precision(diff){
     if (diff<=20){
-        return 1
+        return 1;
     }
 
     else if (diff>20 && diff<=1000){
-        return 1-diff/1250
+        return 1-diff/1250;
     }
 
     else if (diff>1000 && diff<=2000){
-        return 0.4-diff/5000
+        return 0.4-diff/5000;
     }
 
     else if (diff>2000){
-        return 0
+        return 0;
     }
 }
 
 function temps(tps){
     if (tps<3){
-        return 1
+        return 1;
     }
     else {
-        return exp(-(tps-3)/57)
+        return exp(-(tps-3)/57);
     }
 
 }
-
-score=5000*precision(diff)*temps(tps)
-console.log("Votre score est de "+score+"points")
+function score(vraiedate,datejoueur,tps){
+    vraiedate=date(vraiedate);
+    datejoueur=date(datejoueur);
+    const diff = Math.ceil(Math.abs(vraiedate - datejoueur) / (1000 * 60 * 60 * 24)); 
+    score=5000*precision(diff)*temps(tps);
+    console.log("Vous avez viser la vraie date à "+ diff + " jours prés.");
+    console.log("Votre score est de "+score+" points");
+}
