@@ -1,8 +1,8 @@
 const express = require ( 'express' );
 const mongoose= require('mongoose')
 const app=express();
-const wayback = require('./wayback-master/index.js')
-const { isAvailable } = require('./wayback-master/index.js');
+const wayback = require('./wayback-master')
+const { isAvailable } = require('./wayback-master');
 const {httpGet, randomDate, random_item}=require("./wayback-master/examples/check-is-available.js");
 
 socialmedia=["facebook.com", "twitter.com", "instagram.com", "youtube.com"]

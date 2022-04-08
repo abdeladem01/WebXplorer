@@ -6,9 +6,11 @@ h1{
   color: aliceblue
 }
 .ripple-container {
+  transition: transform .2s;
+  border-radius: 30px;
   cursor: pointer;
   text-align: center;
-  background: #9772e0;
+  background: black;
   color: aliceblue;
   font-family: 'Varela Round', sans-serif;
   font-size: 250%;
@@ -16,7 +18,11 @@ h1{
   height: 60px;
   padding-top: 40px;
 }
-
+.ripple-container:hover{
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+}
 .lesboutons{
   display: grid;
   grid-gap: 20px;

@@ -4,35 +4,35 @@ h1.titleGame{
   font-size: 400%;
   font-family: 'Varela Round', sans-serif;
 }
-.ripple-container1 {
-  grid-row-start: 1;
-  grid-row-end: 1;
+.ripple-container1, .ripple-container2 {
+  border-radius: 30px;
+  grid-column: 1;
+  grid-row: 1;
   cursor: pointer;
   text-align: center;
-  background: #9772e0;
+  background: black;
   color: aliceblue;
   font-family: 'Varela Round', sans-serif;
   font-size: 250%;
   width: 300px;
-  height: 170px;
-  padding-top: 130px;
+  height: 80px;
+  padding-top: 40px;
 }
 .ripple-container2 {
-  cursor: pointer;
-  text-align: center;
-  background: #9772e0;
-  color: aliceblue;
-  font-family: 'Varela Round', sans-serif;
-  font-size: 250%;
-  width: 300px;
-  height: 170px;
-  padding-top: 130px;
+  grid-column: 1;
+  grid-row: 2;
 
 }
 .lesboutons{
+  grid-column: 2;
+  grid-row: 1;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(0, 1fr);
   grid-gap: 20px;
+  grid-auto-rows: minmax(100px, auto);
+  /*display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;*/
   justify-content: center;
 }
 img{
@@ -40,6 +40,10 @@ img{
   justify-content: center;
 }
 .logo{
+  margin-top: auto;
+  margin-bottom: auto;
+  grid-column: 1;
+  grid-row: 1;
   text-align: center;
 }
 
@@ -49,4 +53,15 @@ img{
   font-family: 'Varela Round', sans-serif;
   text-align: center;
   margin: auto;
+}
+
+.pageacceuil{
+  top: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(0, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: minmax(100px, auto);
 }

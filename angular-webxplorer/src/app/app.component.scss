@@ -6,12 +6,13 @@ span>h1{
 }
 
 .mat-toolbar.mat-primary {
-  background: black;
+  background: linear-gradient(90deg, black, #520074 );
   margin-bottom: -12px;
 }
 
 .mat-drawer{
-  background: linear-gradient(180deg, blue, pink);
+  /*background: linear-gradient(180deg, blue, pink);*/
+  background: linear-gradient(0deg, black, #520074 );
   width : 300px;
   text-align: center;
   overflow-x: hidden;
@@ -31,7 +32,7 @@ h2.welcome{
 .mat-icon.welcome{
   font-size: 240px;
   vertical-align: middle;
-  color: aliceblue;
+  color: rgba(100, 149, 237, 0.55);
   width : 250px;
 }
 button.menu-button{
@@ -52,7 +53,9 @@ mat-divider {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-
+.bye{
+  color:white;
+}
 //footer
 .footer {
   display: grid;
@@ -63,7 +66,7 @@ mat-divider {
   bottom: 0;
   width: 100%;
   //background: linear-gradient(70deg, blue, pink);
-  background: black;
+  background: linear-gradient(90deg, black, #520074 );
   color: white;
   text-align: center;
   padding: 10px;

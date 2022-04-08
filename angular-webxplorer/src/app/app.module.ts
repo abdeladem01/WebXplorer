@@ -54,6 +54,7 @@ import { SigninSignupComponent } from './signin-signup/signin-signup.component';
 import { GameSettingsComponent } from './game-settings/game-settings.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
+import { WaitingPageComponent } from './waiting-page/waiting-page.component';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import {FormsModule} from "@angular/forms";
     TitlePageComponent,
     GuestOrConnectComponent,
     SigninSignupComponent,
-    GameSettingsComponent
+    GameSettingsComponent,
+    WaitingPageComponent
   ],
   imports: [
     BrowserModule,
