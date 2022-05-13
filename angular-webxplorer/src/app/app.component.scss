@@ -3,8 +3,14 @@
 }
 span>h1{
   color : aliceblue;
+  font-family: 'Varela Round', sans-serif;
+
 }
 
+.mat-icon + span{
+  font-family: 'Varela Round', sans-serif;
+  font-size: 130%;
+}
 .mat-toolbar.mat-primary {
   background: linear-gradient(90deg, black, #520074 );
   margin-bottom: -12px;
@@ -77,4 +83,7 @@ mat-divider {
 .item1 {
   grid-column-start: 1;
   grid-column-end: 1;
+}
+.example-icon2{
+  margin-right: 10px;
 }

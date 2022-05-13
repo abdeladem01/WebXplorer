@@ -1,0 +1,39 @@
+.playing{
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows:  repeat(20, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+#iciclock{
+  vertical-align: middle;
+}
+.page{
+  background: grey;
+  border-radius: 15px;
+  filter: drop-shadow(0 0 0.75rem crimson);
+}
+.timer{
+  z-index:10;
+  width: 70px;
+  height:70px;
+  line-height: 70px;
+  text-align: center;
+  background: #eeeeee;
+  border-radius: 15px;
+}
+//grid settings
+.page{
+  grid-column: 2 / 10;
+  grid-row: 2 / 16;
+}
+.guess{
+  grid-column: 2/ 10;
+  grid-row: 17/18;
+}
+
+.timer{
+  grid-column: 2;
+  grid-row: 2;
+}
