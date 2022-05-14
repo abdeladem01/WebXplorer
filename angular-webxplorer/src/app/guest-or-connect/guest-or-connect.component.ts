@@ -25,7 +25,3 @@ export class GuestOrConnectComponent implements OnInit {
     }
   }
 }
-function clickevent() {
-  throw new Error('Function not implemented.');
-}
-

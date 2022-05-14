@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'playas', component: GuestOrConnectComponent},
   {path: 'gamesettings', component: GameSettingsComponent},
   {path: 'waitingpage', component: WaitingPageComponent},
-  {path: 'playing', component: PlayingPageComponent}
+  {path: 'playing', component: PlayingPageComponent}//temporary
 ];
 
 @NgModule({

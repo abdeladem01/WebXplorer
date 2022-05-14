@@ -30,8 +30,8 @@ export class WaitingPageComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(() => {
-      this.router.navigate(['/home']);
-    }, 20000);
+      this.router.navigate(['/playing']);
+    }, 10000);
   }
 
 }
