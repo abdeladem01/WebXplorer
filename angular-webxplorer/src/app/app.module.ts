@@ -124,7 +124,8 @@ import { PlayingPageComponent } from './playing-page/playing-page.component';
     ScrollingModule,
     FormsModule,
     HttpClientModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
