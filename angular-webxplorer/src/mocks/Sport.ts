@@ -1,6 +1,6 @@
 import {Screen} from "../models/screen.model";
 
-export const SCREEN_LIST: Screen[] = [
+export const SCREEN_LIST_SPORTS: Screen[] = [
   {
     url: 'https://i.imgur.com/03eoZHp.jpg',
     date:20010413,
