@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { PlayService} from "../play.service";
+import {Screen} from "../../models/screen.model";
+
 @Component({
   selector: 'app-playing-page',
   templateUrl: './playing-page.component.html',
@@ -10,7 +13,13 @@ export class PlayingPageComponent implements OnInit {
   interval:number=0;
   finished=false;
   round=1;
-  constructor() { }
+  screensPlay : Screen[];
+  screen : Screen ;
+  textButton = "Next Round"
+  constructor(private playService: PlayService) {
+    this.screensPlay = this.playService.getScreens(5);
+    this.screen = this.screensPlay[this.round-1];
+  }
 
   ngOnInit(): void {
     this.round = 1;
@@ -38,11 +47,17 @@ export class PlayingPageComponent implements OnInit {
   roundEnd2(){
     this.finished=true;
     clearInterval(this.interval);
+    if (this.round==5){
+      this.textButton="Finished";
+    }
   }
   next(){
-    this.round+=1;
-    this.finished=false;
-    this.relaunchTimer();
+    if (this.round<5){
+      this.round+=1;
+      this.finished=false;
+      this.screen = this.screensPlay[this.round-1];
+      this.relaunchTimer();
+    }
   }
   relaunchTimer(){
     this.timeLeft=60;

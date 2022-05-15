@@ -6,7 +6,7 @@
     <span id="iciclock">R {{round}}/5</span>
   </div>
   <div class="page">
-    <img class="image" src="https://i.ibb.co/7QbCmGh/19970505.png" alt="19970505" border="0">
+    <img class="image" src={{screen.url}} alt="19970505" border="0">
   </div>
   <div class="guess">
     <span class="blabla">Put your guess here &nbsp; &nbsp; 🡆</span>
@@ -33,13 +33,13 @@
 </div>
 
 <div class="result" *ngIf="finished">
-  <span class="screenshot"><img class="image" src="https://i.ibb.co/7QbCmGh/19970505.png" alt="19970505" border="0"></span>
+  <span class="screenshot"><img class="image" src={{screen.url}} alt="19970505" border="0"></span>
   <span class="score">
     <br>
       Your guess was nearly correct. <br>
       You got it by an error of 67 days<br>
       The real date was 05/05/1997<br><br>
       You scored 1250 points<br><br><br>
-      <button mat-raised-button (click)="next()">Next Round</button>
+      <button mat-raised-button (click)="next()">{{textButton}}</button>
   </span>
 </div>
