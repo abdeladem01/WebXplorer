@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ThemePalette} from '@angular/material/core';
 import { Router } from '@angular/router';
+import {PlayService} from "../play.service";
 
 export interface Task {
   name: string;
@@ -35,7 +36,7 @@ export class GameSettingsComponent implements OnInit {
 
 
 
-  constructor(public router: Router) { }
+  constructor(private playService: PlayService,public router: Router) { }
 
   ngOnInit(): void {
   }
@@ -53,11 +54,13 @@ export class GameSettingsComponent implements OnInit {
   //Phase 2
   next(i: number){
     this.NbRounds=i;
+    this.playService.setNbRounds(i);
     this.selected+=1;
   }
   //Phase 3
   end(i : number){
     this.difficulty=i;
+    this.playService.setDifficulty(i);
     this.router.navigate(['/waitingpage']);
   }
 
