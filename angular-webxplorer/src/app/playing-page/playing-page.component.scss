@@ -102,7 +102,34 @@
   background: linear-gradient(90deg, black, #520074);
   font-family: 'Varela Round',;
   justify-content: center;
+  align-items: center;
   text-align: center;
   color: aliceblue;
 }
+
+//progress bar
+.bigcontainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.progress-container {
+  align-items: center;
+  height: 0.8rem;
+  width: 32rem;
+  border-radius: 0.4rem;
+
+  background: white;
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+  border-radius: 0.4rem;
+
+  background: cornflowerblue;
+
+  transition: width 0.4s ease;
+}
+
 

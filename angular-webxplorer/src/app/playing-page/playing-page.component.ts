@@ -14,11 +14,11 @@ export class PlayingPageComponent implements OnInit {
   round=1;
   screensPlay : Screen[];screen : Screen ;
   textButton = "Next Round";
-  totalScore : number = 0;
-  trueDate : Date | undefined ;
+  totalScore : number = 0; scoreAct = 0; diffDate = 0; progress="0";
   trueDateDisplay:string="";
   trueDay=0; trueMon=0; trueYea=0;
   roundTotal=this.playService.getNbRounds();
+  dateGuess: string = String(new Date());
   constructor(private playService: PlayService, private router: Router) {
     if (playService.getGuestName()==""){this.router.navigate(['/home']);}
     this.screensPlay = this.playService.getScreens(this.roundTotal);
@@ -53,6 +53,11 @@ export class PlayingPageComponent implements OnInit {
     }
   }
   roundEnd2(){
+    //testing date part:
+    let dateUser = new Date(this.dateGuess);
+    this.calculScoreNormal(dateUser);
+    // let dateUserNumber =dateUser.getFullYear()*10000+dateUser.getMonth()*100+dateUser.getDate();
+    // console.log(dateUserNumber );
     this.finished=true;
     clearInterval(this.interval);
     if (this.round==this.roundTotal){
@@ -72,6 +77,9 @@ export class PlayingPageComponent implements OnInit {
     }
   }
   relaunchTimer(){
+    this.scoreAct=0;
+    this.diffDate=0;
+    this.progress="0";
     this.timeLeft=60;
     setTimeout(()=>{
       this.interval = setInterval(() => {
@@ -88,4 +96,44 @@ export class PlayingPageComponent implements OnInit {
   sumScore(i:number){
     this.totalScore+=i;
   }
+  calculScoreNormal(dateUser : Date){
+    let trueDate= new Date(this.trueYea, this.trueMon - 1, this.trueDay);
+    this.diffDate = Math.round(Math.abs(trueDate.getTime() - dateUser.getTime()) / (1000 * 60 * 60 * 24));
+    this.scoreAct=Math.round(5000*this.precision(this.diffDate)*this.temps(this.timeLeft));
+    this.progress=String(Math.round((this.scoreAct/5000)*100))+"%";
+    this.sumScore(this.scoreAct);
+    console.log(this.progress);
+    console.log("Vous avez viser la vraie date à "+ this.diffDate + " jours prés.");
+    console.log("Votre score est de "+this.scoreAct+" points");
+  }
+
+  //Functions de calcul score :
+  precision(diff : number){
+    if (diff<=20){
+      return 1;
+    }
+
+    else if (diff>20 && diff<=1000){
+      return 1-diff/1250;
+    }
+
+    else if (diff>1000 && diff<=2000){
+      return 0.4-diff/5000;
+    }
+
+    else {
+      return 0;
+    }
+  }
+  temps(tps : number){
+    if (tps<3){
+      return 1;
+    }
+    else {
+      return Math.exp(-(tps-3)/57);
+    }
+
+  }
+
+
 }
