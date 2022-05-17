@@ -42,7 +42,7 @@ export class PlayingPageComponent implements OnInit {
         this.roundEnd()
       }
     },1000)
-  },1000);
+  },2000);
 
   }
 
@@ -91,7 +91,7 @@ export class PlayingPageComponent implements OnInit {
           this.roundEnd()
         }
       },1000)
-    },1000);
+    },2000);
   }
   sumScore(i:number){
     this.totalScore+=i;
@@ -99,7 +99,7 @@ export class PlayingPageComponent implements OnInit {
   calculScoreNormal(dateUser : Date){
     let trueDate= new Date(this.trueYea, this.trueMon - 1, this.trueDay);
     this.diffDate = Math.round(Math.abs(trueDate.getTime() - dateUser.getTime()) / (1000 * 60 * 60 * 24));
-    this.scoreAct=Math.round(5000*this.precision(this.diffDate)*this.temps(this.timeLeft));
+    this.scoreAct=Math.round(3250*this.precision(this.diffDate)*this.temps(this.timeLeft)+1750*this.precision(this.diffDate));
     this.progress=String(Math.round((this.scoreAct/5000)*100))+"%";
     this.sumScore(this.scoreAct);
     console.log(this.progress);
@@ -117,7 +117,7 @@ export class PlayingPageComponent implements OnInit {
       return 1-diff/1250;
     }
 
-    else if (diff>1000 && diff<=2000){
+    else if (diff>1000 && diff<=2500){
       return 0.4-diff/5000;
     }
 
@@ -130,7 +130,7 @@ export class PlayingPageComponent implements OnInit {
       return 1;
     }
     else {
-      return Math.exp(-(tps-3)/57);
+      return Math.exp(-(tps-4)/56);
     }
 
   }
