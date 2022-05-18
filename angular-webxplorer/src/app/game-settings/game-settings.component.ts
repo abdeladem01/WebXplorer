@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ThemePalette} from '@angular/material/core';
 import { Router } from '@angular/router';
+import {PlayService} from "../play.service";
 
 export interface Task {
   name: string;
@@ -17,68 +18,34 @@ export class GameSettingsComponent implements OnInit {
   tabs = ['First', 'Second', 'Third'];selected = 0;centered = false;
   disabled = false;unbounded = false;radius=300;color="rgba(5,89,124,0.89)";
   NbRounds=5;
-  difficulty=1;
-  //Checkbox variables
-  task: Task = {
-    name: 'ALL CATEGORIES',
-    completed: false,
-    color: 'primary',
-    subtasks: [
-      {name: 'Social Media', completed: true, color: 'accent'},
-      {name: 'Sports', completed: true, color: 'accent'},
-      {name: 'News', completed: true, color: 'accent'},
-      {name: 'INSA Websites', completed: true, color: 'accent'},
-    ],
-  };
-
-  allComplete: boolean = false;
+  difficulty=1; category=4;
 
 
 
-  constructor(public router: Router) { }
+
+  constructor(private playService: PlayService,public router: Router) { }
 
   ngOnInit(): void {
   }
   //Phase 1
-  next1(){
-    let a = false;
-    this.task.subtasks?.forEach(e=>a=a||e.completed==true)
-    if (a){
-      this.selected=1;
-    }else{
-      this.selected=0;
-    }
+  next1(i:number){
+    this.playService.setCategory(i);
+    this.selected=1;
+
 
   }
   //Phase 2
   next(i: number){
     this.NbRounds=i;
+    this.playService.setNbRounds(i);
     this.selected+=1;
   }
   //Phase 3
   end(i : number){
     this.difficulty=i;
+    this.playService.setDifficulty(i);
     this.router.navigate(['/waitingpage']);
   }
 
-  //Checkbox utility
-  updateAllComplete() {
-    this.allComplete = this.task.subtasks != null && this.task.subtasks.every(t => t.completed);
-  }
-
-  someComplete(): boolean {
-    if (this.task.subtasks == null) {
-      return false;
-    }
-    return this.task.subtasks.filter(t => t.completed).length > 0 && !this.allComplete;
-  }
-
-  setAll(completed: boolean) {
-    this.allComplete = completed;
-    if (this.task.subtasks == null) {
-      return;
-    }
-    this.task.subtasks.forEach(t => (t.completed = completed));
-  }
 
 }

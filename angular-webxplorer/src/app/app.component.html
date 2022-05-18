@@ -5,7 +5,13 @@
       <mat-icon>menu</mat-icon>
     </button>
     <span><h1>{{title}}</h1></span>
+  <button mat-icon-button class="example-icon2" routerLink='/home' aria-label="icon-button with share icon" title="Home">
+    <mat-icon>home</mat-icon>
+  </button>
     <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon2" routerLink='/sign' aria-label="icon-button with share icon" title="Sign In/Up">
+    <mat-icon>perm_identity</mat-icon>
+  </button>
     <button mat-icon-button class="example-icon" aria-label="icon-button with share icon" title="Share the game with your friends">
       <mat-icon>share</mat-icon>
     </button>
@@ -20,6 +26,7 @@
   <br><br>
   <mat-icon class="welcome">wifi_tethering</mat-icon>
   <h2 class="welcome">Welcome to the Internet Game</h2>
+  <br>
   <button mat-button routerLink="/home" class="menu-button">
     <mat-icon>home</mat-icon>
     <span>Home</span>
@@ -28,7 +35,7 @@
     <mat-icon>person</mat-icon>
     <span>Sign in/up</span>
   </button>
-  <button mat-button class="menu-button">
+  <button mat-button routerLink="/maintenance" class="menu-button">
     <mat-icon>info</mat-icon>
     <span>About the game</span>
   </button>
@@ -37,7 +44,7 @@
 
   <button mat-button class="menu-button">
     <mat-icon>help</mat-icon>
-    <span>Report a bug</span>
+    <span><a class="mailto" href="mailto:abdeladem-saoud.fattah@insa-lyon.fr?subject=WebXploRer : I found a bug in the game : ">Report a bug</a></span>
   </button>
 
 </mat-drawer>

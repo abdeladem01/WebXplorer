@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
+import {PlayService} from "../play.service";
 
 @Component({
   selector: 'app-guest-or-connect',
@@ -10,9 +12,10 @@ export class GuestOrConnectComponent implements OnInit {
   radius=300;color="rgba(198,155,215,0.61)";
   isShow=false;
 
-  user!: String;
-  constructor() {
+  user!: string;
+  constructor(private playService: PlayService,private router: Router) {
     var user=this.user;
+    //[routerLink]="user?['/gamesettings']:['/playas']"
   }
 
   ngOnInit(): void {
@@ -24,8 +27,10 @@ export class GuestOrConnectComponent implements OnInit {
       this.isShow=false;
     }
   }
+  next(){
+    if (this.user){
+      this.playService.setGuestName(this.user);
+      this.router.navigate(['/gamesettings']);
+    }
+  }
 }
-function clickevent() {
-  throw new Error('Function not implemented.');
-}
-

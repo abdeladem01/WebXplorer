@@ -10,7 +10,8 @@ h1.titleGame{
   grid-row: 1;
   cursor: pointer;
   text-align: center;
-  background: black;
+  //background: black;
+  background: linear-gradient(40deg, black, #520074 90% );
   color: aliceblue;
   font-family: 'Varela Round', sans-serif;
   font-size: 250%;

@@ -8,7 +8,7 @@
 .card{
   max-width: 700px;
   background: #b193e0; //TOC
-  background: linear-gradient(230deg, #065ca3, #9772e0 );
+  background: linear-gradient(230deg, rgba(6, 92, 163, 0.5), rgba(151, 114, 224, 0.45));
   color: white;
 }
 .mat-card-title{
@@ -56,6 +56,7 @@
   -ms-transform: scale(1.18); /* IE 9 */
   -webkit-transform: scale(1.18); /* Safari 3-8 */
   transform: scale(1.18);
+  background: linear-gradient(40deg, black, #520074 90% );
 }
 
 h3{

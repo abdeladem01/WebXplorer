@@ -55,6 +55,8 @@ import { GameSettingsComponent } from './game-settings/game-settings.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import { WaitingPageComponent } from './waiting-page/waiting-page.component';
+import { PlayingPageComponent } from './playing-page/playing-page.component';
+import { OnWorkComponent } from './on-work/on-work.component';
 
 
 @NgModule({
@@ -64,7 +66,9 @@ import { WaitingPageComponent } from './waiting-page/waiting-page.component';
     GuestOrConnectComponent,
     SigninSignupComponent,
     GameSettingsComponent,
-    WaitingPageComponent
+    WaitingPageComponent,
+    PlayingPageComponent,
+    OnWorkComponent
   ],
   imports: [
     BrowserModule,
@@ -122,7 +126,8 @@ import { WaitingPageComponent } from './waiting-page/waiting-page.component';
     ScrollingModule,
     FormsModule,
     HttpClientModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

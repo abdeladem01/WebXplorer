@@ -1,33 +1,71 @@
 <div class="content">
 <mat-card class="card">
-  <mat-card-title>Choose settings for your game</mat-card-title>
+  <mat-card-title>Game Settings</mat-card-title>
   <mat-card-content>
   <mat-tab-group [selectedIndex]="selected">
     <mat-tab label="Choose Category">
       <br>
-      <section class="sectionList">
-  <span class="list-section">
-    <mat-checkbox class="marginCheck"
-                  [checked]="allComplete"
-                  [color]="task.color"
-                  [indeterminate]="someComplete()"
-                  (change)="setAll($event.checked)">
-      {{task.name}}
-    </mat-checkbox>
-  </span>
-        <span class="list-section">
-    <ul>
-      <li *ngFor="let subtask of task.subtasks">
-        <mat-checkbox [(ngModel)]="subtask.completed"
-                      [color]="subtask.color"
-                      (ngModelChange)="updateAllComplete()">
-          {{subtask.name}}
-        </mat-checkbox>
-      </li>
-    </ul>
-  </span>
-      </section>
       <div class="lesboutons">
+        <div class="ripple-containerCardCentral mat-elevation-z8"
+             matRipple
+             [matRippleCentered]="centered"
+             [matRippleDisabled]="disabled"
+             [matRippleUnbounded]="unbounded"
+             [matRippleRadius]="radius"
+             [matRippleColor]="color"
+             (click)="next1(4)">
+          All Categories<br>
+          <h3>A max of fun</h3>
+        </div>
+        <div class="ripple-containerCard mat-elevation-z8"
+             matRipple
+             [matRippleCentered]="centered"
+             [matRippleDisabled]="disabled"
+             [matRippleUnbounded]="unbounded"
+             [matRippleRadius]="radius"
+             [matRippleColor]="color"
+             (click)="next1(0)"
+        >
+          Social Media<br>
+          <h3>See how it was before you got addicted to it</h3>
+        </div>
+        <div class="ripple-containerCard mat-elevation-z8"
+             matRipple
+             [matRippleCentered]="centered"
+             [matRippleDisabled]="disabled"
+             [matRippleUnbounded]="unbounded"
+             [matRippleRadius]="radius"
+             [matRippleColor]="color"
+             (click)="next1(1)"
+        >
+          Sports<br>
+          <h3>Sports and Web, it goes hand in hand</h3>
+        </div>
+        <div class="ripple-containerCard mat-elevation-z8"
+             matRipple
+             [matRippleCentered]="centered"
+             [matRippleDisabled]="disabled"
+             [matRippleUnbounded]="unbounded"
+             [matRippleRadius]="radius"
+             [matRippleColor]="color"
+             (click)="next1(2)"
+        >
+          News<br>
+          <h3>It's boring... but we have to</h3>
+        </div>
+        <div class="ripple-containerCard mat-elevation-z8"
+             matRipple
+             [matRippleCentered]="centered"
+             [matRippleDisabled]="disabled"
+             [matRippleUnbounded]="unbounded"
+             [matRippleRadius]="radius"
+             [matRippleColor]="color"
+             (click)="next(3)">
+          INSA<br>
+          <h3>Our little touch for Insalians</h3>
+        </div>
+      </div>
+      <!--<div class="lesboutons">
         <br>
         <div class="ripple-container mat-elevation-z4"
              matRipple
@@ -39,7 +77,7 @@
              (click)="next1()">
           Next ><br>
         </div>
-      </div>
+      </div>-->
       <br>
     </mat-tab>
     <mat-tab  label="Choose number of rounds">
@@ -106,7 +144,7 @@
              [matRippleColor]="color"
              (click)="end(1)"
         >
-          Normal<br>
+          Xtrem<br>
           <h3>Score calculated with the WebX algorithm </h3>
         </div>
       </div>

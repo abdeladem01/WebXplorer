@@ -42,9 +42,8 @@ function temps(tps){
 
 }
 function score(vraiedate,datejoueur,tps){
-    vraiedate=date(vraiedate);
-    datejoueur=date(datejoueur);
-    const diff = Math.ceil(Math.abs(vraiedate - datejoueur) / (1000 * 60 * 60 * 24)); 
+
+    const diff = Math.ceil(Math.abs(vraiedate - datejoueur) / (1000 * 60 * 60 * 24));
     score=5000*precision(diff)*temps(tps);
     console.log("Vous avez viser la vraie date à "+ diff + " jours prés.");
     console.log("Votre score est de "+score+" points");
