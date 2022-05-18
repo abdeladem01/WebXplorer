@@ -18,9 +18,10 @@ export class PlayingPageComponent implements OnInit {
   trueDateDisplay:string="";
   trueDay=0; trueMon=0; trueYea=0;
   roundTotal=this.playService.getNbRounds();
-  dateGuess: string = String(new Date());
+  dateGuess: string = "2022"; units="days";
   constructor(private playService: PlayService, private router: Router) {
     if (playService.getGuestName()==""){this.router.navigate(['/home']);}
+    this.playService.setScoreTotal(0);
     this.screensPlay = this.playService.getScreens(this.roundTotal);
     this.screen = this.screensPlay[this.round-1];
     this.trueYea= Math.floor(this.screen.date/10000);
@@ -28,6 +29,10 @@ export class PlayingPageComponent implements OnInit {
     this.trueDay=this.screen.date-this.trueMon*100-this.trueYea*10000;
     this.trueDateDisplay=String(this.trueDay)+"/"+String(this.trueMon)+"/"+String(this.trueYea);
     this.difficulty=this.playService.getDifficulty();
+    if (this.difficulty==0){
+      this.units="years";
+    }
+
   }
 
   ngOnInit(): void {
@@ -56,7 +61,10 @@ export class PlayingPageComponent implements OnInit {
   roundEnd2(){
     //testing date part:
     let dateUser = new Date(this.dateGuess);
-    this.calculScoreNormal(dateUser);
+    if (this.difficulty==1){this.calculScoreNormal(dateUser);}
+    else{
+      this.calculScoreBaby(dateUser);
+    }
     // let dateUserNumber =dateUser.getFullYear()*10000+dateUser.getMonth()*100+dateUser.getDate();
     // console.log(dateUserNumber );
     this.finished=true;
@@ -75,6 +83,10 @@ export class PlayingPageComponent implements OnInit {
       this.trueDay=this.screen.date-this.trueMon*100-this.trueYea*10000;
       this.trueDateDisplay=String(this.trueDay)+"/"+String(this.trueMon)+"/"+String(this.trueYea);
       this.relaunchTimer();
+    }
+    else{
+      this.playService.setScoreTotal(this.totalScore);
+      //ici routerLink vers dernier component
     }
   }
   relaunchTimer(){
@@ -108,7 +120,10 @@ export class PlayingPageComponent implements OnInit {
     console.log("Votre score est de "+this.scoreAct+" points");
   }
   calculScoreBaby(dateUser : Date){
-
+    this.diffDate= Math.round(Math.abs(this.trueYea - dateUser.getFullYear()));
+    this.scoreAct=Math.round(5000*this.precisionBaby(this.diffDate)*this.tempsBaby(60-this.timeLeft));
+    this.progress=String(Math.round((this.scoreAct/5000)*100))+"%";
+    this.sumScore(this.scoreAct);
   }
   //Functions de calcul score :
   precision(diff : number){
@@ -129,11 +144,11 @@ export class PlayingPageComponent implements OnInit {
     }
   }
   precisionBaby(diff : number){
-    if (diff = 0){
+    if (diff == 0){
       return 1;
     }
     else if (diff<10){
-      return 1-(diff/10)
+      return (1-(diff/10));
     }
     else{
       return 0;
@@ -150,7 +165,7 @@ export class PlayingPageComponent implements OnInit {
   }
   tempsBaby(tps:number){
     if (tps<30){
-      return 0;
+      return 1;
     }
     else if (tps<60){
       return 1-(tps/200)

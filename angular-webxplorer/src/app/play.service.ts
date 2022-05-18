@@ -13,6 +13,7 @@ export class PlayService {
   private _nbRounds=5;
   private _difficulty=1;
   private _predefinedMode=false;
+  private _scoreTotal = 0 ;
   constructor() { }
   getScreens(i:number) : Screen[]{
     let list = SCREEN_LIST;
@@ -29,4 +30,7 @@ export class PlayService {
   setDifficulty(value: number) {this._difficulty = value;}
   getPredefinedMode(): boolean {return this._predefinedMode;}
   setPredefinedMode(value: boolean) {this._predefinedMode = value;}
+  getScoreTotal(): number {return this._scoreTotal;}
+  setScoreTotal(value: number) {this._scoreTotal = value;}
+
 }
