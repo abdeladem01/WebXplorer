@@ -56,6 +56,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import { WaitingPageComponent } from './waiting-page/waiting-page.component';
 import { PlayingPageComponent } from './playing-page/playing-page.component';
+import { OnWorkComponent } from './on-work/on-work.component';
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import { PlayingPageComponent } from './playing-page/playing-page.component';
     SigninSignupComponent,
     GameSettingsComponent,
     WaitingPageComponent,
-    PlayingPageComponent
+    PlayingPageComponent,
+    OnWorkComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,43 @@
+.maintenance{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+}
+span{
+  text-align: center;
+}
+h1{
+  color: black;
+  font-weight: bold;
+  font-family: 'Varela Round',;
+}
+h3{
+  font-family: 'Varela Round',;
+}
+img{
+  width: 30%;
+}
+
+.ripple-container {
+  border-radius: 30px;
+  cursor: pointer;
+  text-align: center;
+  //background: #9772e0;
+  background: black;   color: aliceblue;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 150%;
+  width: 100px;
+  height: 30px;
+  padding-top: 15px;
+}
+.ripple-container :hover {
+  -ms-transform: scale(1.7); /* IE 9 */
+  -webkit-transform: scale(1.7); /* Safari 3-8 */
+  transform: scale(1.7);
+}
+.lesboutons{
+  display: grid;
+  grid-gap: 20px;
+  justify-content: center;
+}

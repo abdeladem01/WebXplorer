@@ -6,6 +6,7 @@ import {GuestOrConnectComponent} from "./guest-or-connect/guest-or-connect.compo
 import {GameSettingsComponent} from "./game-settings/game-settings.component";
 import {WaitingPageComponent} from "./waiting-page/waiting-page.component";
 import {PlayingPageComponent} from "./playing-page/playing-page.component";
+import {OnWorkComponent} from "./on-work/on-work.component";
 
 const routes: Routes = [
   {path: 'sign', component: SigninSignupComponent},
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path: 'playas', component: GuestOrConnectComponent},
   {path: 'gamesettings', component: GameSettingsComponent},
   {path: 'waitingpage', component: WaitingPageComponent},
-  {path: 'playing', component: PlayingPageComponent}//temporary
+  {path: 'playing', component: PlayingPageComponent},
+  {path: 'maintenance', component: OnWorkComponent}
 ];
 
 @NgModule({
