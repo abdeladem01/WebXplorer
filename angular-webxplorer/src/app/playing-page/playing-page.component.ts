@@ -11,7 +11,7 @@ import {Router} from "@angular/router";
 })
 export class PlayingPageComponent implements OnInit {
   timeLeft: number = 60;interval:number=0;finished=false;
-  round=1;
+  round=1; difficulty=1;
   screensPlay : Screen[];screen : Screen ;
   textButton = "Next Round";
   totalScore : number = 0; scoreAct = 0; diffDate = 0; progress="0";
@@ -27,6 +27,7 @@ export class PlayingPageComponent implements OnInit {
     this.trueMon=Math.floor(this.screen.date/100)-(this.trueYea*100);
     this.trueDay=this.screen.date-this.trueMon*100-this.trueYea*10000;
     this.trueDateDisplay=String(this.trueDay)+"/"+String(this.trueMon)+"/"+String(this.trueYea);
+    this.difficulty=this.playService.getDifficulty();
   }
 
   ngOnInit(): void {
@@ -99,14 +100,16 @@ export class PlayingPageComponent implements OnInit {
   calculScoreNormal(dateUser : Date){
     let trueDate= new Date(this.trueYea, this.trueMon - 1, this.trueDay);
     this.diffDate = Math.round(Math.abs(trueDate.getTime() - dateUser.getTime()) / (1000 * 60 * 60 * 24));
-    this.scoreAct=Math.round(3250*this.precision(this.diffDate)*this.temps(this.timeLeft)+1750*this.precision(this.diffDate));
+    this.scoreAct=Math.round(4500*this.precision(this.diffDate)*this.temps(60-this.timeLeft)+500*this.precision(this.diffDate));
     this.progress=String(Math.round((this.scoreAct/5000)*100))+"%";
     this.sumScore(this.scoreAct);
     console.log(this.progress);
-    console.log("Vous avez viser la vraie date à "+ this.diffDate + " jours prés.");
+    console.log("Vous avez viser la vraie date à "+ this.diffDate + " jours prés.")
     console.log("Votre score est de "+this.scoreAct+" points");
   }
+  calculScoreBaby(dateUser : Date){
 
+  }
   //Functions de calcul score :
   precision(diff : number){
     if (diff<=20){
@@ -125,6 +128,17 @@ export class PlayingPageComponent implements OnInit {
       return 0;
     }
   }
+  precisionBaby(diff : number){
+    if (diff = 0){
+      return 1;
+    }
+    else if (diff<10){
+      return 1-(diff/10)
+    }
+    else{
+      return 0;
+    }
+  }
   temps(tps : number){
     if (tps<3){
       return 1;
@@ -134,6 +148,16 @@ export class PlayingPageComponent implements OnInit {
     }
 
   }
-
+  tempsBaby(tps:number){
+    if (tps<30){
+      return 0;
+    }
+    else if (tps<60){
+      return 1-(tps/200)
+    }
+    else{
+      return 0;
+    }
+  }
 
 }
