@@ -57,6 +57,7 @@ import {FormsModule} from "@angular/forms";
 import { WaitingPageComponent } from './waiting-page/waiting-page.component';
 import { PlayingPageComponent } from './playing-page/playing-page.component';
 import { OnWorkComponent } from './on-work/on-work.component';
+import { EndPageComponent } from './end-page/end-page.component';
 
 
 @NgModule({
@@ -68,7 +69,8 @@ import { OnWorkComponent } from './on-work/on-work.component';
     GameSettingsComponent,
     WaitingPageComponent,
     PlayingPageComponent,
-    OnWorkComponent
+    OnWorkComponent,
+    EndPageComponent
   ],
   imports: [
     BrowserModule,

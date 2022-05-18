@@ -86,7 +86,7 @@ export class PlayingPageComponent implements OnInit {
     }
     else{
       this.playService.setScoreTotal(this.totalScore);
-      //ici routerLink vers dernier component
+      this.router.navigate(['/finished']);
     }
   }
   relaunchTimer(){

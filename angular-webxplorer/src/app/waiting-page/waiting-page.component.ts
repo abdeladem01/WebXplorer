@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {trigger, style, animate, transition, stagger, query, keyframes} from '@angular/animations';
+import {PlayService} from "../play.service";
 // s
 @Component({
   selector: 'app-waiting-page',
@@ -23,7 +24,8 @@ import {trigger, style, animate, transition, stagger, query, keyframes} from '@a
 })
 export class WaitingPageComponent implements OnInit {
   items : string[] = [];
-  constructor(private router: Router) {
+  constructor(private router: Router, private playService: PlayService) {
+    if (playService.getGuestName()==""){this.router.navigate(['/home']);}
     this.items = ['And because the Internet before was not as fast as today\'s','We invite you to go back to the good old habits','by waiting for the loading of the game'];
 
   }
