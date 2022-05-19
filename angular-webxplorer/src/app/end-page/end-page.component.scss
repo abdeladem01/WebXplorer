@@ -17,6 +17,7 @@
 .highscore{
   grid-row: 5/7;
   overflow: visible;
+  text-align: center;
 }
 
 h1,h3, i, strong{
@@ -84,4 +85,9 @@ h1{
   -ms-transform: scale(1.7); /* IE 9 */
   -webkit-transform: scale(1.7); /* Safari 3-8 */
   transform: scale(1.7);
+}
+
+img{
+  height: 100%;
+
 }

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { SCREEN_LIST} from "../mocks/screens";
 import {Screen} from "../models/screen.model";
+import {HttpClient} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class PlayService {
   private _difficulty=1;
   private _predefinedMode=false;
   private _scoreTotal = 0 ;
-  constructor() { }
+  constructor(private http: HttpClient) { }
   getScreens(i:number) : Screen[]{
     let list = SCREEN_LIST;
     const shuffled = list.sort(() => 0.5 - Math.random());
