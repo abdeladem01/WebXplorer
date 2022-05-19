@@ -126,50 +126,54 @@ export const SCREEN_LIST: Screen[] = [
     url: 'https://i.imgur.com/cg408qR.png' ,
     date: 20210410,
   },
+  
+  /*Finfo */
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/NNmRIH7.png' ,
+    date: 20120919,
   },
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/tkUUXDj.jpg' ,
+    date: 20131231,
   },
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/uY4gHNX.png' ,
+    date: 20140321,
   },
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/eP8DgKk.png' ,
+    date: 20150527,
   },
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/MjC5yPk.png' ,
+    date: 20161129,
   },
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/oUOH17u.png' ,
+    date: 20171119,
   },
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/6rjLC7U.jpg' ,
+    date: 20180715,
   },
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/ligRdIb.png' ,
+    date: 20190519,
   },
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/OSNe5sS.png' ,
+    date: 20201205,
   },
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/xBqvOJi.png' ,
+    date: 20210410,
   },
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/pPv149m.png' ,
+    date: 20220331,
   },
+  
+  /*LeFigaro*/
   {
     url: '' ,
     date:,
