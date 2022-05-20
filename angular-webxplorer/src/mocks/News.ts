@@ -175,6 +175,150 @@ export const SCREEN_LIST: Screen[] = [
   
   /*LeFigaro*/
   {
+    url: 'https://i.imgur.com/KTkorTv.png' ,
+    date: 19970110,
+  },
+  {
+    url: 'https://i.imgur.com/bihe6KF.png' ,
+    date: 19981212,
+  },
+  {
+    url: 'https://i.imgur.com/kv8UWvk.png' ,
+    date: 20010926,
+  },
+  {
+    url: 'https://i.imgur.com/jmVqKhG.png' ,
+    date: 20020227,
+  },
+  {
+    url: 'https://i.imgur.com/OBUm58r.png' ,
+    date: 20030128,
+  },
+  {
+    url: 'https://i.imgur.com/Q8FoZRH.png' ,
+    date: 20040717,
+  },
+  {
+    url: 'https://i.imgur.com/ZLsHVgp.png' ,
+    date: 20051124,
+  },
+  {
+    url: 'https://i.imgur.com/b0oMLsq.png' ,
+    date: 20060308,
+  },
+  {
+    url: 'https://i.imgur.com/o3Je5tO.png' ,
+    date: 20070607,
+  },
+  {
+    url: 'https://i.imgur.com/FNtVinI.png' ,
+    date: 20081106,
+  },
+  {
+    url: 'https://i.imgur.com/3ErffN1.png' ,
+    date: 20090212,
+  },
+  {
+    url: 'https://i.imgur.com/17k0q0J.png' ,
+    date: 20100901,
+  },
+  {
+    url: 'https://i.imgur.com/tjIRqpk.png' ,
+    date: 20111113,
+  },
+  {
+    url: 'https://i.imgur.com/9ng1h2z.png' ,
+    date: 20120225,
+  },
+  {
+    url: 'https://i.imgur.com/GZ8wntR.png' ,
+    date: 20131230,
+  },
+  {
+    url: 'https://i.imgur.com/NXqeg30.png' ,
+    date: 20140110,
+  },
+  {
+    url: 'https://i.imgur.com/6ICSVCm.png' ,
+    date: 20150814,
+  },
+  {
+    url: 'https://i.imgur.com/Wlvt5cD.png' ,
+    date: 20160229,
+  },
+  {
+    url: 'https://i.imgur.com/toYMUvI.jpg' ,
+    date: 20171221,
+  },
+  {
+    url: 'https://i.imgur.com/fcpnRpO.jpg' ,
+    date: 20180716,
+  },
+  {
+    url: 'https://i.imgur.com/IUQD9nv.png' ,
+    date: 20190911,
+  },
+  {
+    url: 'https://i.imgur.com/Je1P0BU.png' ,
+    date: 20210610,
+  },
+  {
+    url: 'https://i.imgur.com/i89msmO.png' ,
+    date: 20220331,
+  },
+  
+  
+  
+  
+  {
+    url: '' ,
+    date:,
+  },
+  {
+    url: '' ,
+    date:,
+  },
+  {
+    url: '' ,
+    date:,
+  },
+  {
+    url: '' ,
+    date:,
+  },
+  {
+    url: '' ,
+    date:,
+  },
+  {
+    url: '' ,
+    date:,
+  },
+  {
+    url: '' ,
+    date:,
+  },
+  {
+    url: '' ,
+    date:,
+  },
+  {
+    url: '' ,
+    date:,
+  },
+  {
+    url: '' ,
+    date:,
+  },
+  {
+    url: '' ,
+    date:,
+  },
+  {
+    url: '' ,
+    date:,
+  },
+  {
     url: '' ,
     date:,
   },
