@@ -2,6 +2,8 @@ import {Screen} from "../models/screen.model";
 
 export const SCREEN_LIST: Screen[] = [
   
+  /* LeMonde */
+  
   {
     url: 'https://i.imgur.com/WlNqaRc.png' ,
     date: 20010626,
@@ -268,75 +270,200 @@ export const SCREEN_LIST: Screen[] = [
   },
   
   
+  /* 20Minutes */ 
   
+  {
+    url: 'https://i.imgur.com/u3VcgqQ.png' ,
+    date: 20040630,
+  },
+  {
+    url: 'https://i.imgur.com/mB1NEOu.png' ,
+    date: 20050920,
+  },
+  {
+    url: 'https://i.imgur.com/M1UYY0F.png' ,
+    date: 20060309,
+  },
+  {
+    url: 'https://i.imgur.com/ivF3X9l.png' ,
+    date: 20070210,
+  },
+  {
+    url: 'https://i.imgur.com/xfF1IGN.png' ,
+    date: 20081101,
+  },
+  {
+    url: 'https://i.imgur.com/UFGkgiz.png' ,
+    date: 20090226,
+  },
+  {
+    url: 'https://i.imgur.com/cdzWzD7.png' ,
+    date: 20101213,
+  },
+  {
+    url: 'https://i.imgur.com/TlmQne6.png' ,
+    date: 20110809,
+  },
+  {
+    url: 'https://i.imgur.com/vv53Bvw.jpg' ,
+    date: 20120128,
+  },
+  {
+    url: 'https://i.imgur.com/MmZtbAu.png' ,
+    date: 20131119,
+  },
+  {
+    url: 'https://i.imgur.com/LCk2mBY.png' ,
+    date: 20140122,
+  },
+  {
+    url: 'https://i.imgur.com/p1bXCdX.png' ,
+    date: 20150123,
+  },
+  {
+    url: 'https://i.imgur.com/gz4JPE0.png' ,
+    date: 20160308,
+  },
+  {
+    url: 'https://i.imgur.com/rbVYwN9.png' ,
+    date: 20170204,
+  },
+  {
+    url: 'https://i.imgur.com/NxuhmxH.png' ,
+    date: 20180430,
+  },
+  {
+    url: 'https://i.imgur.com/x0Fhm7w.png' ,
+    date: 20190912,
+  },
+  {
+    url: 'https://i.imgur.com/aP1eOS9.png' ,
+    date: 20201205,
+  },
+  {
+    url: 'https://i.imgur.com/yAC8oG9.png' ,
+    date: 20210210,
+  },
+  
+  /*AFP*/
   
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/s3pqwR4.png' ,
+    date: 20121001,
   },
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/ruATQR1.png' ,
+    date: 20130502,
   },
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/13A1mAj.png' ,
+    date: 20140131,
   },
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/uuddxuX.png' ,
+    date: 20150331,
   },
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/hoSy4Xi.png' ,
+    date: 20161015,
   },
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/jVyeR4O.png' ,
+    date: 20170628,
   },
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/UanKQLs.png' ,
+    date: 20180110,
   },
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/r4ke87K.jpg' ,
+    date: 20190629,
   },
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/nLv3cST.jpg' ,
+    date: 20201109,
   },
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/XiDPtxQ.png' ,
+    date: 20210128,
   },
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/3ZaqdFx.jpg' ,
+    date: 20220324,
+  },
+  
+  /*LeParisien*/ 
+  
+  {
+    url: 'https://i.imgur.com/gCJdaJS.png' ,
+    date: 19980526,
   },
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/0lxT8iq.png' ,
+    date: 20010522,
   },
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/PrtorT8.png' ,
+    date: 20040622,
   },
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/zCS8zRj.png' ,
+    date: 20051124,
   },
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/14XEwtD.png' ,
+    date: 20060302,
   },
   {
-    url: '' ,
-    date:,
+    url: 'https://i.imgur.com/d75WPQ7.png' ,
+    date: 20071006,
   },
-
-
-
-
-
+  {
+    url: 'https://i.imgur.com/Z2Z39B0.png' ,
+    date: 20081106,
+  },
+  {
+    url: 'https://i.imgur.com/HZBVPMN.png' ,
+    date: 20090226,
+  },
+  {
+    url: 'https://i.imgur.com/REL4Cpt.jpg' ,
+    date: 20101017,
+  },
+  {
+    url: 'https://i.imgur.com/w4V72eH.png' ,
+    date: 20110615,
+  },
+  {
+    url: 'https://i.imgur.com/kAo4Sg3.png' ,
+    date: 20120131,
+  },
+  {
+    url: 'https://i.imgur.com/pOv9DmD.png' ,
+    date: 20131205,
+  },
+  {
+    url: 'https://i.imgur.com/BUDEWO0.png' ,
+    date: 20140610,
+  },
+  {
+    url: 'https://i.imgur.com/asX1kHR.png' ,
+    date: 20160912,
+  },
+  {
+    url: 'https://i.imgur.com/8XasbxS.png' ,
+    date: 20170826,
+  },
+  {
+    url: 'https://i.imgur.com/3Oomzs2.png' ,
+    date: 20181111,
+  },
+  {
+    url: 'https://i.imgur.com/HpSXeRh.png' ,
+    date: 20190511,
+  },
+  {
+    url: 'https://i.imgur.com/k5v9ZAs.jpg' ,
+    date: 20220519,
+  },
 ]; 
