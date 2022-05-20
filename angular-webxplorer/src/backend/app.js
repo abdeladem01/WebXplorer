@@ -6,8 +6,8 @@ const url='mongodb+srv://whitemerchant:Chakib111@webxplorerdb.ebfgn.mongodb.net/
 insadocs=42
 sportsdocs=80
 socialmediadocs=157
-everythingdocs=281
-newsdocs=41 //mohamed doit rajouter
+everythingdocs=393
+newsdocs=111 //mohamed doit rajouter
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
@@ -43,7 +43,7 @@ app.get('/site',(req, res, next)=>{
       setTimeout(function(){
         res.json(listOfScreens);
         client.close();
-      },800)
+      },4000)
     } else if (category == 1) {
       sports = database.collection('Sports')
       let i;
@@ -59,7 +59,7 @@ app.get('/site',(req, res, next)=>{
       setTimeout(function(){
         res.json(listOfScreens);
         client.close();
-      },800)
+      },4000)
     }
     else if (category == 2){
       news= database.collection('News')
@@ -74,7 +74,7 @@ app.get('/site',(req, res, next)=>{
       setTimeout(function(){
         res.json(listOfScreens);
         client.close();
-      },800)
+      },4000)
     }else if (category == 3){
       insa= database.collection('Insa')
       for (i=0;i<nbScreen;i++){
@@ -88,7 +88,7 @@ app.get('/site',(req, res, next)=>{
       setTimeout(function(){
         res.json(listOfScreens);
         client.close();
-      },800)
+      },4000)
     }else if (category == 4) {
       every = database.collection('Everything');
       for (i = 0; i < nbScreen; i++) {
@@ -102,7 +102,7 @@ app.get('/site',(req, res, next)=>{
       setTimeout(function(){
         res.json(listOfScreens);
         client.close();
-      },800)
+      },4000)
     }
                 }
     findItems();
