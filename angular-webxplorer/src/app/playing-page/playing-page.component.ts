@@ -12,7 +12,7 @@ import {Router} from "@angular/router";
 export class PlayingPageComponent implements OnInit {
   timeLeft: number = 60;interval:number=0;finished=false;
   round=1; difficulty=1;
-  screensPlay : Screen[];screen : Screen ;
+  screensPlay : Screen[];screen : Screen ; screenUrl : string;
   textButton = "Next Round";
   totalScore : number = 0; scoreAct = 0; diffDate = 0; progress="0";
   trueDateDisplay:string="";
@@ -22,11 +22,12 @@ export class PlayingPageComponent implements OnInit {
   constructor(private playService: PlayService, private router: Router) {
     if (playService.getGuestName()==""){this.router.navigate(['/home']);}
     this.playService.setScoreTotal(0);
-    this.screensPlay = this.playService.getScreens(this.roundTotal);
+    this.screensPlay = this.playService.getScreenz(); //TO DO IMPLEMENTS API
     this.screen = this.screensPlay[this.round-1];
-    this.trueYea= Math.floor(this.screen.date/10000);
-    this.trueMon=Math.floor(this.screen.date/100)-(this.trueYea*100);
-    this.trueDay=this.screen.date-this.trueMon*100-this.trueYea*10000;
+    this.screenUrl=this.screen['url'];
+    this.trueYea= Math.floor(this.screen['date']/10000);
+    this.trueMon=Math.floor(this.screen['date']/100)-(this.trueYea*100);
+    this.trueDay=this.screen['date']-this.trueMon*100-this.trueYea*10000;
     this.trueDateDisplay=String(this.trueDay)+"/"+String(this.trueMon)+"/"+String(this.trueYea);
     this.difficulty=this.playService.getDifficulty();
     if (this.difficulty==0){
@@ -78,9 +79,10 @@ export class PlayingPageComponent implements OnInit {
       this.round+=1;
       this.finished=false;
       this.screen = this.screensPlay[this.round-1];
-      this.trueYea= Math.floor(this.screen.date/10000);
-      this.trueMon=Math.floor(this.screen.date/100)-(this.trueYea*100);
-      this.trueDay=this.screen.date-this.trueMon*100-this.trueYea*10000;
+      this.screenUrl=this.screen['url'];
+      this.trueYea= Math.floor(this.screen['date']/10000);
+      this.trueMon=Math.floor(this.screen['date']/100)-(this.trueYea*100);
+      this.trueDay=this.screen['date']-this.trueMon*100-this.trueYea*10000;
       this.trueDateDisplay=String(this.trueDay)+"/"+String(this.trueMon)+"/"+String(this.trueYea);
       this.relaunchTimer();
     }

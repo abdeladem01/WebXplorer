@@ -1,12 +1,13 @@
 const express = require ( 'express' );
-const mongoose= require('mongoose')
+const { MongoClient } = require("mongodb");
 const app=express();
-const wayback = require('./wayback-master')
-const { isAvailable } = require('./wayback-master');
-const {httpGet, randomDate, random_item}=require("./wayback-master/examples/check-is-available.js");
 
-socialmedia=["facebook.com", "twitter.com", "instagram.com", "youtube.com"]
-
+const url='mongodb+srv://whitemerchant:Chakib111@webxplorerdb.ebfgn.mongodb.net/?retryWrites=true&w=majority'
+insadocs=42
+sportsdocs=80
+socialmediadocs=157
+everythingdocs=281
+newsdocs=41 //mohamed doit rajouter
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
@@ -14,21 +15,97 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use((req,res,next)=>{
-  rand=randomDate(new Date(2010, 0, 1, 0, 0, 0), new Date(2022, 4, 4, 18, 28, 28));
-  site=random_item(socialmedia)
 
-  // check for specific timestamp, return if found else retun closest timestamp
-  wayback.isAvailable(site,rand,function(err,data){
-    if(err)
-      console.log(err);
-    //We get the url from the API
-	  url=data.archived_snapshots.closest.url;
-    //We get the html from the url
-    html=httpGet(url);
-    res.send(html)
-  })
 
-})
+app.get('/site',(req, res, next)=>{
+  let listOfScreens = [];
+  const findItems = async () => {
+    const client=await MongoClient.connect(url);
+    var database = client.db("Webxplorerdb");
+//i c'est la category
+    let category = req.query.category;
+    let nbScreen = req.query.nb;
+    let randomNum;
+    let site;
+    let social;
+    let i;
+    if (category == 0) {
+      social = database.collection('Social Media');
 
+      for (i =0 ; i < nbScreen; i++) {
+        randomNum = Math.floor(Math.random() * socialmediadocs);
+        site = await social.findOne({_id: randomNum},
+          function (err, result) {
+            if (err) throw err;
+            listOfScreens.push(result);
+          })
+      }
+      setTimeout(function(){
+        res.json(listOfScreens);
+        client.close();
+      },800)
+    } else if (category == 1) {
+      sports = database.collection('Sports')
+      let i;
+      for (i =0 ; i < nbScreen; i++) {
+        randomNum = Math.floor(Math.random() * sportsdocs);
+        site = await sports.findOne({_id: randomNum},
+          function (err, result) {
+            if (err) throw err;
+            console.log(result, i);
+            listOfScreens.push(result)
+          });
+      }
+      setTimeout(function(){
+        res.json(listOfScreens);
+        client.close();
+      },800)
+    }
+    else if (category == 2){
+      news= database.collection('News')
+      for (i=0;i<nbScreen;i++){
+        randomNum=Math.floor(Math.random() * newsdocs);
+        site=await news.findOne({_id:randomNum},
+          function(err, result) {
+            if (err) throw err;
+            listOfScreens.push(result);
+          })
+      }
+      setTimeout(function(){
+        res.json(listOfScreens);
+        client.close();
+      },800)
+    }else if (category == 3){
+      insa= database.collection('Insa')
+      for (i=0;i<nbScreen;i++){
+        randomNum=Math.floor(Math.random() * insadocs);
+        site=await insa.findOne({_id:randomNum},
+          function(err, result) {
+            if (err) throw err;
+            listOfScreens.push(result)
+          })
+      }
+      setTimeout(function(){
+        res.json(listOfScreens);
+        client.close();
+      },800)
+    }else if (category == 4) {
+      every = database.collection('Everything');
+      for (i = 0; i < nbScreen; i++) {
+        randomNum = Math.floor(Math.random() * everythingdocs);
+        site = await every.findOne({_id: randomNum},
+          function (err, result) {
+            if (err) throw err;
+            listOfScreens.push(result)
+          })
+      }
+      setTimeout(function(){
+        res.json(listOfScreens);
+        client.close();
+      },800)
+    }
+                }
+    findItems();
+}
+);
 module.exports=app;
