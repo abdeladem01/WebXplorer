@@ -46,7 +46,7 @@ export class PlayService {
     this.http.get(this.getUrl,{params:queryParams}).subscribe(
       (result) => {
         this._screens = result;
-        console.log(this._screens);
+        // console.log(this._screens);
       });
     return this._screens;
   }
