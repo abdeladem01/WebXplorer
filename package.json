@@ -1,0 +1,36 @@
+{
+  "name": "webxplorer",
+  "version": "1.0.0",
+  "description": "PWEB Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdeladem01/WebXplorer.git#main"
+  },
+  "keywords": [
+    "Guessing",
+    "-",
+    "Game",
+    "-",
+    "MEAN",
+    "-",
+    "Dates"
+  ],
+  "author": "Abdeladem S.Fattah, Chakib Hamie, Christian Hajj , Hiba Bellagnech , Ibrahim Iraqui , Mohamed Bouzoubaa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdeladem01/WebXplorer/issues"
+  },
+  "homepage": "https://github.com/abdeladem01/WebXplorer/tree/main#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "mongodb": "^4.6.0",
+    "mongoose": "^6.3.3",
+    "nodemon": "^2.0.16"
+  }
+}
