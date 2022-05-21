@@ -1,0 +1,140 @@
+.playing{
+  height: 90%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows:  repeat(20, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+#iciclock{
+  vertical-align: middle;
+  font-weight: bold;
+  font-family: 'Varela Round', sans-serif;
+  color: aliceblue;
+}
+.page{
+  background: #ffffff;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 0.75rem crimson);
+  overflow: auto;
+}
+
+.image{
+  width: 100%;
+}
+.timer, .round{
+  background: linear-gradient(90deg, black, #520074 );
+  z-index:1;
+  width: 70px;
+  height:70px;
+  line-height: 70px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.guess{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  text-align: center;
+  background: linear-gradient(90deg, black, #520074);
+  border-radius: 10px;
+  color:aliceblue;
+}
+//grid settings
+.page{
+  grid-column: 2 / 10;
+  grid-row: 2 / 16;
+}
+.guess{
+  grid-column: 2/ 10;
+  grid-row: 17/18;
+}
+
+.timer{
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.round{
+  grid-column: 2;
+  grid-row: 15;
+}
+//grid of guess
+.blabla{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: bold;
+  font-family: 'Varela Round', sans-serif;
+  vertical-align: middle;
+}
+.cbon{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cbon > button{
+  height: 50%;
+  width:70%;
+
+}
+.datepicker{
+  grid-column: 2/4;
+  background-color: white;
+  color: black;
+}
+
+//round fini, resultat
+.result{
+  height: 90%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows:  repeat(3, 1fr);
+}
+.screenshot{
+  grid-row: 1/3;
+  overflow: hidden;
+}
+.score{
+  grid-row: 3;
+  filter: drop-shadow(0 0 0.75rem crimson);
+  background: linear-gradient(90deg, black, #520074);
+  font-family: 'Varela Round',;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: aliceblue;
+}
+
+//progress bar
+.bigcontainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.progress-container {
+  align-items: center;
+  height: 0.8rem;
+  width: 32rem;
+  border-radius: 0.4rem;
+
+  background: white;
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+  border-radius: 0.4rem;
+
+  background: cornflowerblue;
+
+  transition: width 0.4s ease;
+}
+
+h2{
+  font-family: 'Varela Round',;
+}
+strong{
+  font-family: 'Varela Round',;
+}

@@ -1,0 +1,79 @@
+.content{
+  margin-top: 3%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  justify-content: center;
+}
+.card{
+  max-width: 700px;
+  background: #b193e0; //TOC
+  background: linear-gradient(230deg, rgba(6, 92, 163, 0.5), rgba(151, 114, 224, 0.45));
+  color: white;
+}
+.mat-card-title{
+  text-align: center;
+  font-weight: 900;
+  font-size: 200%;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.lesboutons{
+  display: grid;
+  grid-gap: 20px;
+  justify-content: center;
+}
+.ripple-container , .ripple-containerCard, .ripple-containerCardCentral {
+  border-radius: 30px;
+  cursor: pointer;
+  text-align: center;
+  //background: #9772e0;
+  background: black;   color: aliceblue;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 150%;
+  width: 100px;
+  height: 30px;
+  padding-top: 15px;
+}
+.ripple-containerCard {
+  transition: transform .2s;
+  border-radius: 10px;
+  font-size: 200%;
+  width: 300px;
+  height: 45px;
+  padding-top: 10px;
+  margin-left: 50px;
+}
+.ripple-containerCardCentral {
+  transition: transform .2s;
+  border-radius: 10px;
+  font-size: 200%;
+  width: 400px;
+  height: 50px;
+  padding-top: 13px;
+}
+.ripple-containerCard:hover,.ripple-containerCardCentral:hover{
+  -ms-transform: scale(1.18); /* IE 9 */
+  -webkit-transform: scale(1.18); /* Safari 3-8 */
+  transform: scale(1.18);
+  background: linear-gradient(40deg, black, #520074 90% );
+}
+
+h3{
+  font-size: 40%;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 4px;
+
+}
+
+.marginCheck{
+  color: aliceblue;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 200%;
+}
+.sectionList{
+  margin-left: 30%;
+}

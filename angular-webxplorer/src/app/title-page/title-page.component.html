@@ -1,0 +1,33 @@
+<br><br><br><br><br><br><br>
+<!--à centrer avec CSS /!\-->
+<div class="pageacceuil">
+<div class="logo"><img src="./assets/WebXplorer.png"></div>
+<!--<h1 class="titleGame">{{title}}</h1>-->
+
+<!--<h2 class="rules">WebXploRer is a game where you need to pinpoint the exact date where a screenshot of a website occurred.<br>You may think it will be easy, but rest assured it will be fun.<br>What are you waiting for? PLAY NOW!</h2>-->
+
+<div class="lesboutons">
+<div routerLink="/playas" class="ripple-container1 mat-elevation-z8"
+     matRipple
+     [matRippleCentered]="centered"
+     [matRippleDisabled]="disabled"
+     [matRippleUnbounded]="unbounded"
+     [matRippleRadius]="radius"
+     [matRippleColor]="color">
+  Play Solo<br>
+  <h3>Try to be in the leaderboard!</h3>
+</div>
+  <div routerLink="/maintenance" class="ripple-container2 mat-elevation-z8"
+       matRipple
+       [matRippleCentered]="centered"
+       [matRippleDisabled]="disabled"
+       [matRippleUnbounded]="unbounded"
+       [matRippleRadius]="radius"
+       [matRippleColor]="color">
+    Multiplayer
+    <br>
+    <h3>
+      Play with friends in a room!</h3>
+  </div>
+</div>
+</div>

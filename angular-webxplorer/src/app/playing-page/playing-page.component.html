@@ -1,0 +1,58 @@
+<div class="playing" *ngIf="finished==false">
+  <div class="timer">
+<span id="iciclock">{{timeLeft}} s</span>
+  </div>
+  <div class="round">
+    <span id="iciclock">R {{round}}/{{roundTotal}}</span>
+  </div>
+  <div class="page">
+    <img class="image" src={{screenUrl}}>
+  </div>
+  <div class="guess">
+    <span class="blabla">Put your guess here &nbsp; &nbsp; 🡆</span>
+    <span class="datepicker">
+      <mat-form-field appearance="fill" class="example-form-field" *ngIf="difficulty==1">
+
+  <mat-label>Choose a date</mat-label>
+  <input matInput [matDatepicker]="datepicker" [(ngModel)]="dateGuess">
+  <mat-hint>MM/DD/YYYY</mat-hint>
+  <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+  <mat-datepicker #datepicker startView="multi-year">
+    <mat-datepicker-actions>
+      <button mat-button matDatepickerCancel>Cancel</button>
+      <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+    </mat-datepicker-actions>
+  </mat-datepicker>
+
+</mat-form-field>
+      <mat-form-field appearance="outline"*ngIf="difficulty==0">
+      <mat-label>Year Guess (YYYY)</mat-label>
+      <input matInput placeholder="Year" [(ngModel)]="dateGuess" >
+      <mat-icon matSuffix>calendar_today</mat-icon>
+      <mat-hint>YYYY</mat-hint>
+    </mat-form-field>
+    </span>
+    <span class="cbon">
+      <span class="surcouche">
+      <button mat-raised-button (click)="roundEnd2()">I submit</button>
+    </span>
+      </span>
+  </div>
+</div>
+
+<div class="result" *ngIf="finished">
+  <span class="screenshot"><img class="image" src={{screen.url}}></span>
+  <span class="score">
+    <br>
+      You got it by an error of {{diffDate}} {{units}}<br>
+      The real date was {{trueDateDisplay}}<br>
+    You scored <strong>{{scoreAct}} points</strong><br>
+    <div class="bigcontainer">
+    <div class="progress-container">
+      <div class="progress" [ngStyle]="{'width' : progress}" ></div>
+    </div>
+      </div><br>
+      <button mat-raised-button (click)="next()">{{textButton}}</button>
+    <br><h2>Your total score is : {{totalScore}}</h2>
+  </span>
+</div>

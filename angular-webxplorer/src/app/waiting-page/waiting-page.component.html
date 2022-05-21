@@ -1,0 +1,16 @@
+<div class="waiting">
+
+<div [@listAnimation]="items.length" class="textt">
+  <div id="elem" *ngFor="let elem of items">
+    {{ elem }}
+</div>
+</div>
+  <br><br>
+  <div class="waitimg">
+
+<!--    <img class="waitimg2" src="./assets/loading5.gif">-->
+    <mat-spinner></mat-spinner>
+    <h3>Loading..</h3>
+  </div>
+
+</div>

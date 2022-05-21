@@ -1,0 +1,93 @@
+.finished{
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows:  repeat(6, 1fr);
+}
+.final{
+  grid-row: 1/4;
+  filter: drop-shadow(0 0 10rem crimson);
+  background: linear-gradient(90deg, black, #520074);
+  font-family: 'Varela Round',;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: aliceblue;
+}
+.highscore{
+  grid-row: 5/7;
+  overflow: visible;
+  text-align: center;
+}
+
+h1,h3, i, strong{
+  font-family: 'Varela Round', sans-serif;
+}
+h1{
+  font-weight: bold;
+  color: white;
+}
+.titlee{
+  position:absolute; bottom:0;
+  font-weight: normal;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.bigcontainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.progress-container {
+  align-items: center;
+  height: 0.8rem;
+  width: 32rem;
+  border-radius: 0.4rem;
+
+  background: white;
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+  border-radius: 0.4rem;
+
+  background: cornflowerblue;
+
+  transition: width 0.4s ease;
+}
+
+.lesboutons{
+  width: 40%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows:  repeat(1, 1fr);
+  text-align: center;
+  margin: auto;
+}
+.ripple-container {
+  margin: auto;
+  border-radius: 30px;
+  cursor: pointer;
+  text-align: center;
+  //background: #9772e0;
+  background: white;   color: black;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 150%;
+  width: 100px;
+  height: 30px;
+  padding-top: 15px;
+}
+.ripple-container :hover {
+  -ms-transform: scale(1.7); /* IE 9 */
+  -webkit-transform: scale(1.7); /* Safari 3-8 */
+  transform: scale(1.7);
+}
+
+img{
+  height: 100%;
+
+}

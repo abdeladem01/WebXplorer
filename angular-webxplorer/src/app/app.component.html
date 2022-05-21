@@ -1,0 +1,59 @@
+<mat-drawer-container [hasBackdrop]=true>
+<p>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" (click)="drawer.toggle()" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span><h1>{{title}}</h1></span>
+  <button mat-icon-button class="example-icon2" routerLink='/home' aria-label="icon-button with share icon" title="Home">
+    <mat-icon>home</mat-icon>
+  </button>
+    <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon2" routerLink='/sign' aria-label="icon-button with share icon" title="Sign In/Up">
+    <mat-icon>perm_identity</mat-icon>
+  </button>
+    <button mat-icon-button class="example-icon" aria-label="icon-button with share icon" title="Share the game with your friends">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+</p>
+<!--<div [ngStyle]="{backgroundImage :  'url(../images/kq19DZ.webp)'}"></div>-->
+</mat-drawer-container>
+<mat-drawer #drawer class="sidenav" mode="over" >
+  <button mat-icon-button class="example-icon" (click)="drawer.toggle()" aria-label="Example icon-button with menu icon">
+  <mat-icon class="bye">close</mat-icon>
+  </button>
+  <br><br>
+  <mat-icon class="welcome">wifi_tethering</mat-icon>
+  <h2 class="welcome">Welcome to the Internet Game</h2>
+  <br>
+  <button mat-button routerLink="/home" class="menu-button">
+    <mat-icon>home</mat-icon>
+    <span>Home</span>
+  </button>
+  <button mat-button routerLink="/sign" class="menu-button">
+    <mat-icon>person</mat-icon>
+    <span>Sign in/up</span>
+  </button>
+  <button mat-button routerLink="/maintenance" class="menu-button">
+    <mat-icon>info</mat-icon>
+    <span>About the game</span>
+  </button>
+
+  <mat-divider></mat-divider>
+
+  <button mat-button class="menu-button">
+    <mat-icon>help</mat-icon>
+    <span><a class="mailto" href="mailto:abdeladem-saoud.fattah@insa-lyon.fr?subject=WebXploRer : I found a bug in the game : ">Report a bug</a></span>
+  </button>
+
+</mat-drawer>
+<!--<app-title-page></app-title-page>-->
+<!--<app-guest-or-connect></app-guest-or-connect>-->
+<!--<app-signin-signup></app-signin-signup>-->
+<router-outlet></router-outlet>
+<div class="footer">
+  <div class="item1">Currently in development</div>
+  <div class="item2">©2022 WebXploRer</div>
+  <div class="item3">Game designed by WebXploRer Team 3TC</div>
+</div>

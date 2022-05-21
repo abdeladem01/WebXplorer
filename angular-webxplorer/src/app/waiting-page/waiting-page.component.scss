@@ -1,0 +1,31 @@
+#elem{
+  color: black;
+  text-align: center;
+  font-weight: 900;
+  font-size: 200%;
+  padding-top: 15px;
+  font-family: 'Varela Round', sans-serif;
+}
+.waitimg2{
+  width: 50px;
+  height: auto;
+}
+.waitimg{
+  text-align: center;
+}
+.textt{
+
+}
+.waiting{
+  position: relative;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.mat-spinner{
+  width: 50px;
+  height: auto;
+  text-align: center;
+  margin: auto;
+}

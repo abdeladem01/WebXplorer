@@ -1,0 +1,56 @@
+<br><br>
+<div class="container">
+  <mat-card class="card2">
+    <mat-card-title>Attention!</mat-card-title>
+    <mat-card-content>The authentication process is not secured! Please choose a non personal password.</mat-card-content>
+    </mat-card>
+</div>
+<br>
+<div class="container">
+  <mat-card class="card">
+    <div>
+    <mat-card-title>Sign in</mat-card-title>
+    <mat-card-subtitle>if you don't have an account, go to sign up!</mat-card-subtitle>
+    <mat-card-content>
+      <p> <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>person</mat-icon>
+      </mat-form-field></p>
+      <p><mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" placeholder="Placeholder">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field></p>
+    </mat-card-content>
+    </div>
+    <mat-card-actions>
+      <button mat-button class="sign">SIGN IN</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="card">
+    <div>
+    <mat-card-title>Sign up</mat-card-title>
+    <mat-card-subtitle>New to the game? Welcome!</mat-card-subtitle>
+    <mat-card-content>
+      <p> <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>person</mat-icon>
+      </mat-form-field></p>
+      <p><mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" placeholder="Placeholder">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field></p>
+    </mat-card-content>
+    </div>
+    <mat-card-actions>
+      <button mat-button class="sign">SIGN UP</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

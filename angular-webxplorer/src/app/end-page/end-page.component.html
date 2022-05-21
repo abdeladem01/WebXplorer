@@ -1,0 +1,41 @@
+<div class="finished">
+  <span class="final">
+    <h3>What a gaaaaaaaame!</h3>
+    <h1>You scored {{totalScore}} points</h1>
+    <div class="bigcontainer">
+    <div class="progress-container">
+      <div class="progress" [ngStyle]="{'width' : progress}" ></div>
+    </div>
+      </div>
+
+    <h3>{{text}}</h3>
+      <div class="lesboutons">
+        <div class="ripple-container mat-elevation-z4" routerLink="/home"
+             matRipple
+             [matRippleCentered]="centered"
+             [matRippleDisabled]="disabled"
+             [matRippleUnbounded]="unbounded"
+             [matRippleRadius]="radius"
+             [matRippleColor]="color">
+          <mat-icon>home</mat-icon>
+        </div>
+        <div class="ripple-container mat-elevation-z4" routerLink="/waitingpage"
+             matRipple
+             [matRippleCentered]="centered"
+             [matRippleDisabled]="disabled"
+             [matRippleUnbounded]="unbounded"
+             [matRippleRadius]="radius"
+             [matRippleColor]="color">
+          <mat-icon>replay</mat-icon>
+        </div>
+      </div>
+    <br>
+    <h1 class="titlee" *ngIf="difficulty==1"><i>{{text2}}</i>&nbsp; <strong>{{username}}</strong>, <i>Here is your ranking in the leaderboard</i></h1>
+  </span>
+  <span class="highscore">
+  <app-on-work *ngIf="difficulty==1"></app-on-work>
+    <img *ngIf="difficulty==0" src="./assets/WebXplorer.png">
+  </span>
+
+
+</div>

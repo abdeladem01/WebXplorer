@@ -1,0 +1,20 @@
+
+> angular-webxplorer@0.0.0 start
+> ng serve
+
+
+Initial Chunk Files   | Names         |  Raw Size
+vendor.js             | vendor        |   5.51 MB |
+styles.css, styles.js | styles        | 337.45 kB |
+polyfills.js          | polyfills     | 294.81 kB |
+main.js               | main          |  58.12 kB |
+runtime.js            | runtime       |   6.53 kB |
+
+| Initial Total |   6.19 MB
+
+Build at: 2022-04-06T09:50:52.889Z - Hash: 591a8ae45eb73f5b - Time: 5491ms
+
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+
+
+✖ Failed to compile.

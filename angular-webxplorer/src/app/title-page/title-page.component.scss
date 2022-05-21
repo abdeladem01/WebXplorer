@@ -1,0 +1,68 @@
+h1.titleGame{
+  text-align: center;
+  font-weight: 900;
+  font-size: 400%;
+  font-family: 'Varela Round', sans-serif;
+}
+.ripple-container1, .ripple-container2 {
+  border-radius: 30px;
+  grid-column: 1;
+  grid-row: 1;
+  cursor: pointer;
+  text-align: center;
+  //background: black;
+  background: linear-gradient(40deg, black, #520074 90% );
+  color: aliceblue;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 250%;
+  width: 300px;
+  height: 80px;
+  padding-top: 40px;
+}
+.ripple-container2 {
+  grid-column: 1;
+  grid-row: 2;
+
+}
+.lesboutons{
+  grid-column: 2;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: repeat(0, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: minmax(100px, auto);
+  /*display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;*/
+  justify-content: center;
+}
+img{
+  width: 400px;
+  justify-content: center;
+}
+.logo{
+  margin-top: auto;
+  margin-bottom: auto;
+  grid-column: 1;
+  grid-row: 1;
+  text-align: center;
+}
+
+.rules{
+  width: 500px;
+  color: black;
+  font-family: 'Varela Round', sans-serif;
+  text-align: center;
+  margin: auto;
+}
+
+.pageacceuil{
+  top: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(0, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: minmax(100px, auto);
+}

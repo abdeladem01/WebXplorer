@@ -1,0 +1,96 @@
+@use "@angular/material" as mat;
+@include mat.core();
+
+$my-app-primary: mat.define-palette(mat.$indigo-palette);
+$my-app-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$my-app-warn: mat.define-palette(mat.$red-palette);
+
+$my-app-theme: mat.define-light-theme(
+    (
+      color: (
+        primary: $my-app-primary,
+        accent: $my-app-accent,
+        warn: $my-app-warn,
+      ),
+    )
+);
+
+@include mat.all-component-themes($my-app-theme);
+/* Application-wide Styles */
+
+
+@font-face {
+  font-family: 'Varela Round';
+  src: url("varelaround-regular-webfont.woff") format("woff");
+}
+html{
+  //background: linear-gradient(45deg, rgba(10, 186, 151, 0.57), rgba(89, 213, 231, 0.51));
+  //background: white;
+  //background: linear-gradient(0deg, #9772e0,pink);
+  //background: linear-gradient(0deg, white ,pink);
+ /* background:
+    linear-gradient(217deg, rgb(25, 229, 251), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgb(163, 0, 251), rgba(0,255,0,0) 95.71%),
+    linear-gradient(336deg, rgb(25, 115, 251), rgba(0,0,255,0) 70.71%),
+    linear-gradient(17deg, rgb(30, 0, 97), rgba(0,0,255,0) 65.71%);*/
+  background-image: radial-gradient(farthest-corner at 30% 50%,
+    #ffffff 0%, #0e68b7 100%);
+}
+
+h1 {
+  color: #007bff;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 250%;
+
+
+}
+body {
+  margin: 2em;
+}
+
+button {
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  font-size: 1.2rem;
+
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+button:hover {
+  background-color: #035970;
+  color: white;
+}
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}
+
+/* everywhere else */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+//Scroll :  custom scroll
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #9d9b9b;
+  border-radius: 15px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:   linear-gradient(180deg, black, #520074 );;
+  border-radius: 15px;
+}

@@ -1,0 +1,34 @@
+<br><br><br><br><br>
+<br>
+<div class="lesboutons">
+  <div (click)="guestClick()" class="ripple-container mat-elevation-z8"
+       matRipple
+       [matRippleCentered]="centered"
+       [matRippleDisabled]="disabled"
+       [matRippleUnbounded]="unbounded"
+       [matRippleRadius]="radius"
+       [matRippleColor]="color">
+    Play as guest<br>
+  </div>
+  <div *ngIf = "isShow">
+    <mat-form-field appearance="outline">
+      <mat-label>Your guest's username</mat-label>
+      <input matInput placeholder="Username" [(ngModel)]="user" >
+      <mat-icon matSuffix>perm_identity</mat-icon>
+      <mat-hint>You progress will not be saved</mat-hint>
+    </mat-form-field>
+    <button mat-icon-button (click)="next()" class="done-icon" >
+      <mat-icon>done</mat-icon>
+    </button>
+  </div>
+  <div routerLink="/sign" class="ripple-container mat-elevation-z8"
+       matRipple
+       [matRippleCentered]="centered"
+       [matRippleDisabled]="disabled"
+       [matRippleUnbounded]="unbounded"
+       [matRippleRadius]="radius"
+       [matRippleColor]="color">
+    Sign up and Play
+    <br>
+  </div>
+</div>
