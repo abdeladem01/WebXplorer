@@ -19,7 +19,7 @@ export class PlayService {
   private _difficulty=1;
   private _predefinedMode=false;
   private _scoreTotal = 0 ;
-  getUrl='http://localhost:3000/site';
+  getUrl='https://webx-the-backend.herokuapp.com/site';
   recupSite : any = null;
   constructor(private http: HttpClient) { }
   getScreens(i:number) : Screen[]{ //API MIEUX

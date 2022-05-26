@@ -1,0 +1,83 @@
+span{
+  font-size: 150%;
+}
+
+h1 {
+  letter-spacing: -15px;
+  font-family: Open Sans;
+  color: white;
+  text-align: center;
+  font-size: 200px;
+  font-weight: 800;
+  line-height: 200px;
+}
+
+.MainContainer {
+  perspective: 1px;
+  //transform-style: preserve-3d;
+  height: 90vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.ContentContainer {
+  position: relative;
+  display: block;
+  background:   linear-gradient(90deg, black, #520074 );;
+  z-index: 1;
+}
+
+.Content {
+  text-align: center;
+  color: white;
+  max-width: 75%;
+  margin: 0 auto;
+  padding: 75px 0;
+}
+.Content span{
+  text-align: justify;
+  font-family: 'Varela Round',;
+}
+.first-word{
+  font-size: 170%;
+  font-style: oblique;
+}
+.first-word2{
+  font-weight: bolder;
+  font-size: 120%;
+
+}
+.images{
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-rows:  repeat(1, 1fr);
+
+}
+.ekip p{
+  text-align: center;
+  font-family: 'Varela Round',;
+}
+.ekip img{
+  width:100%;
+  border-radius: 50%;
+}
+.ekip img:hover{
+  opacity: 60%;
+}
+
+.ParallaxContainer {
+  display: flex;
+  flex: 1 0 auto;
+  position: relative;
+  z-index: -1;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  transform: translateZ(-1px) scale(2);
+  background: url(https://i.imgur.com/aAnU34Y.jpg);
+  background-position: right;
+  background-size: cover;
+  background-color: rgb(250,228, 216);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800');

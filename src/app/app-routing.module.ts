@@ -8,6 +8,7 @@ import {WaitingPageComponent} from "./waiting-page/waiting-page.component";
 import {PlayingPageComponent} from "./playing-page/playing-page.component";
 import {OnWorkComponent} from "./on-work/on-work.component";
 import {EndPageComponent} from "./end-page/end-page.component";
+import {AboutComponent} from "./about/about.component";
 
 const routes: Routes = [
   {path: 'sign', component: SigninSignupComponent},
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path: 'waitingpage', component: WaitingPageComponent},
   {path: 'playing', component: PlayingPageComponent},
   {path: 'maintenance', component: OnWorkComponent},
-  {path: 'finished', component: EndPageComponent}
+  {path: 'finished', component: EndPageComponent},
+  {path: 'about', component: AboutComponent}
 ];
 
 @NgModule({

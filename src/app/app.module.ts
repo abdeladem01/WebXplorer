@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -58,6 +58,8 @@ import { WaitingPageComponent } from './waiting-page/waiting-page.component';
 import { PlayingPageComponent } from './playing-page/playing-page.component';
 import { OnWorkComponent } from './on-work/on-work.component';
 import { EndPageComponent } from './end-page/end-page.component';
+import { AboutComponent } from './about/about.component';
+
 
 
 @NgModule({
@@ -70,7 +72,8 @@ import { EndPageComponent } from './end-page/end-page.component';
     WaitingPageComponent,
     PlayingPageComponent,
     OnWorkComponent,
-    EndPageComponent
+    EndPageComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
